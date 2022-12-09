@@ -1,0 +1,345 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    font-family: "Kosugi Maru", sans-serif;
+    color: #191919;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+body {
+    font-family: "小杉丸", sans-serif;
+    min-width: 1280px;
+    background-color: #fbfbfb;
+    overflow-x: hidden;
+    background-color: #fff6e5;
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 14px 21% 0 13%;
+    box-sizing: border-box;
+}
+.logo {
+    width: 135px;
+}
+.pc_nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 73px;
+}
+.pc_nav {
+    text-align: center;
+    border-radius: 30px;
+    width: 500px;
+    height: 60px;
+    background-color: #ffffff;
+    font-family: ”tbudrgothic-std”, sans-serif;
+    display: inline-block;
+}
+.pc_nav ul li {
+    color: #550700;
+    font-size: 13px;
+    padding: 24px 0;
+    text-align: center;
+}
+
+.header_contact {
+    text-align: center;
+    display: inline-block;
+}
+.header_contact .letter {
+    margin: 19px 0;
+}
+
+.me_title {
+    display: flex;
+    align-items: center;
+    padding-top: 76px;
+}
+.yes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.yes:before {
+    border-top: 1px solid #191919;
+    content: "";
+    width: 428px;
+    margin-right: 47px;
+}
+.yes p {
+    transform: rotate(-30deg);
+    font-size: 18px;
+    letter-spacing: 0.12em;
+    margin-bottom: 27px;
+}
+.me_pic {
+    width: 77px;
+    margin-bottom: 58px;
+    padding-right: 18px;
+}
+.me_top {
+    font-size: 21px;
+    letter-spacing: 0.12em;
+}
+.me_text span {
+    font-size: 33px;
+    color: #b20700;
+}
+.about_pic {
+    width: 900px;
+    margin: 0 auto;
+}
+.about_name {
+    display: flex;
+    justify-content: center;
+    padding-top: 35px;
+    background-color: #b20700;
+    padding-bottom: 66px;
+}
+.name_space {
+    content: "";
+    width: 55px;
+    height: 1px;
+    transform: rotate(-220deg);
+    background-color: #ffffff;
+    border-radius: 2px;
+    margin-top: 26px;
+}
+.name {
+    text-align: center;
+    padding-right: 66px;
+}
+.name1 {
+    font-size: 25px;
+    letter-spacing: 0.12em;
+    color: #ffffff;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: bold;
+}
+.name2 {
+    font-size: 18px;
+    letter-spacing: 0.12em;
+    color: #ffffff;
+    font-family: "Montserrat Alternates", sans-serif;
+    padding-top: 10px;
+}
+.designer {
+    padding-left: 66px;
+}
+.designer p {
+    font-size: 17px;
+    letter-spacing: 0.07em;
+    font-family: "Montserrat Alternates", sans-serif;
+    color: #ffffff;
+}
+.web {
+    padding-bottom: 22px;
+}
+.about_red_back img {
+    vertical-align: bottom;
+}
+.kamereon_text p {
+    font-size: 23px;
+    padding-top: 88px;
+    padding-bottom: 48px;
+}
+.kamereon_text,
+.kamereon_hover {
+    text-align: center;
+}
+.kamereon_text p .span1 {
+    font-size: 15px;
+    transform: rotate(-30deg);
+    display: inline-block;
+    vertical-align: 103%;
+    padding-left: 20px;
+    margin-right: -10px;
+}
+.kamereon_text p .span2 {
+    font-family: "Montserrat Alternates", sans-serif;
+}
+.kamereon_hover {
+    font-size: 12px;
+}
+.kamereon_image {
+    width: 1000px;
+    margin-top: -171px;
+}
+.me_container {
+    border: 1px solid #fff;
+    background-color: #fff;
+    width: 1044px;
+    margin-left: auto;
+    position: relative;
+    margin-bottom: 67px;
+}
+.me_container h3 {
+    padding-top: 41px;
+    padding-left: 49px;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+.me_detail p {
+    padding-left: 162px;
+    font-size: 14px;
+    padding-top: 26px;
+    line-height: 1.78;
+}
+.me_text4 span {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: bold;
+}
+.me_text4 {
+    padding-bottom: 50px;
+}
+.me_top_alert {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+}
+.kai_monster {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 299px;
+}
+.nagi_monster {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 299px;
+}
+.dream_container {
+    border: 1px solid #fff;
+    background-color: #fff;
+    width: 942px;
+    position: relative;
+    margin-bottom: 67px;
+}
+.dream_container h3 {
+    padding-top: 41px;
+    padding-left: 217px;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+.dream_detail p {
+    padding-left: 479px;
+    font-size: 14px;
+    padding-top: 26px;
+    line-height: 1.78;
+}
+.dream_text3 {
+    padding-bottom: 62px;
+}
+.dream_text3 span {
+    color: #b20700;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: bold;
+}
+.dream_top_alert {
+    position: absolute;
+    top: 22px;
+    left: 190px;
+}
+.sui_white {
+    position: absolute;
+    bottom: 28px;
+    left: 0;
+    width: 400px;
+}
+.contact_icon {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    position: relative;
+}
+.contact_pic {
+    width: 224px;
+    display: inline-block;
+    padding-top: 61px;
+    padding-bottom: 12px;
+}
+.contact_icon p {
+    font-size: 12px;
+}
+.contact_btn {
+    position: absolute;
+    top: 26px;
+    right: 48%;
+}
+.footer_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 19px 27% 0 33%;
+    box-sizing: border-box;
+    padding-top: 356px;
+}
+.pc_nav_footer ul {
+    display: flex;
+}
+.pc_nav_footer ul li {
+    color: #550700;
+    font-size: 13px;
+    padding-right: 70px;
+    text-align: center;
+}
+.footer_contact {
+    color: #b20700;
+}
+.copyright p {
+    margin: 0 auto;
+    text-align: center;
+    color: #550700;
+    font-size: 12px;
+    font-family: "Montserrat Alternates", sans-serif;
+    padding-top: 87px;
+    padding-bottom: 21px;
+}
