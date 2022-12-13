@@ -1,0 +1,477 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    font-family: "Kosugi Maru", sans-serif;
+    color: #191919;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+body {
+    font-family: "小杉丸", sans-serif;
+    min-width: 1280px;
+    background-color: #fbfbfb;
+    overflow-x: hidden;
+    background-color: #fbfbfb;
+}
+#header {
+    background-color: #ffe2b5;
+}
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 14px 21% 0 13%;
+    box-sizing: border-box;
+}
+.logo {
+    width: 135px;
+}
+.pc_nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 73px;
+}
+.pc_nav {
+    text-align: center;
+    border-radius: 30px;
+    width: 500px;
+    height: 60px;
+    background-color: #ffffff;
+    font-family: ”tbudrgothic-std”, sans-serif;
+    display: inline-block;
+}
+.pc_nav ul li {
+    color: #550700;
+    font-size: 13px;
+    padding: 24px 0;
+    text-align: center;
+}
+
+.header_contact {
+    text-align: center;
+    display: inline-block;
+}
+.header_contact .letter {
+    margin: 19px 0;
+}
+.works_title {
+    padding-top: 98px;
+    text-align: center;
+    background-color: #ffe2b5;
+    position: relative;
+}
+.works_title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/works_bg@2x.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.works_title h2 {
+    font-size: 46px;
+    letter-spacing: 0.03em;
+    font-weight: lighter;
+}
+.works_title_img {
+    display: flex;
+    justify-content: center;
+}
+.kai_img {
+    width: 123px;
+    padding-right: 100px;
+    padding-top: 80px;
+}
+.sui_img {
+    width: 98px;
+    padding-right: 77px;
+    padding-top: 73px;
+}
+.nagi_img {
+    width: 120px;
+    padding-top: 32px;
+}
+.works_message {
+    text-align: center;
+    padding-top: 98px;
+    position: relative;
+}
+.works_lead {
+    font-size: 22px;
+}
+.works_lead span {
+    font-size: 46px;
+    font-weight: bold;
+    display: inline-block;
+    font-family: "Zen Maru Gothic", sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px #b20700;
+}
+.text1,
+.text2 {
+    font-size: 17px;
+    line-height: 1.76;
+}
+.text1 {
+    padding-top: 44px;
+    padding-bottom: 33px;
+}
+.text2 {
+    padding-bottom: 224px;
+}
+.kai_balloon {
+    width: 151px;
+    position: absolute;
+    top: 5%;
+    left: 8%;
+}
+.nagi_balloon {
+    width: 253px;
+    position: absolute;
+    top: 10%;
+    right: 8%;
+}
+.heart1 {
+    position: absolute;
+    top: 9%;
+    right: 28%;
+}
+.heart2 {
+    position: absolute;
+    bottom: 30%;
+    left: 28%;
+}
+.tab {
+    position: relative;
+}
+.tab-list {
+    display: flex;
+}
+.btn1 {
+    font-size: 15px;
+    padding-bottom: 7px;
+}
+.btn2 {
+    font-size: 11px;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+.tab-list-item1 {
+    width: 200px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #ede0b9;
+    background-color: #ede0b9;
+    border-top-right-radius: 12px;
+    margin-right: 36px;
+    cursor: pointer;
+}
+.tab-list-item2 {
+    width: 200px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #ebd180;
+    background-color: #ebd180;
+    border-top-right-radius: 12px;
+    margin-right: 74px;
+    cursor: pointer;
+}
+.tab-list-item3 {
+    width: 300px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #ffe2b5;
+    background-color: #ffe2b5;
+    border-top-right-radius: 12px;
+    cursor: pointer;
+}
+.tab-contents {
+    display: none;
+}
+.is-btn-active {
+    font-weight: bold;
+}
+.is-contents-active {
+    display: block;
+}
+.tab_list_top {
+    display: flex;
+    position: absolute;
+    top: -18px;
+    right: 8%;
+}
+.sui_watch {
+    width: 95px;
+}
+.alert {
+    padding-left: 4px;
+    padding-top: 27px;
+}
+.tab_list_top p {
+    padding-top: 39px;
+    font-size: 14px;
+}
+.tab-bottom1 {
+    background-color: #ede0b9;
+    height: 79px;
+}
+.tab-bottom2 {
+    background-color: #ede0b9;
+    height: 79px;
+    margin-top: 144px;
+}
+
+.works_title_head {
+    text-align: center;
+    padding-top: 132px;
+}
+.works_title_head h3 {
+    font-size: 38px;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 500;
+}
+.works_title_head p {
+    padding-top: 23px;
+    font-size: 15px;
+    padding-bottom: 200px;
+}
+
+.work_contens {
+    display: flex;
+    justify-content: center;
+}
+.work_img {
+    width: 550px;
+    padding-right: 43px;
+}
+.work_detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 550px;
+}
+.work_heading1_r {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 34px;
+    color: #b20700;
+}
+.work_heading2_r {
+    padding-top: 15px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 17px;
+    color: #b20700;
+}
+
+.work_heading1_y {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 34px;
+    color: #e2b725;
+}
+.work_heading2_y {
+    padding-top: 15px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 17px;
+    color: #e2b725;
+}
+.work_heading1_g {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 34px;
+    color: #008473;
+}
+.work_heading2_g {
+    padding-top: 15px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 17px;
+    color: #008473;
+}
+.work_text1 {
+    padding-top: 53px;
+    width: 545px;
+    display: inline-block;
+    text-align: start;
+    font-size: 16px;
+    line-height: 1.75;
+}
+.work_chart {
+    width: 592px;
+    background-color: #ffffff;
+    border: 1px dashed #e2b725;
+    border-radius: 12px;
+    margin: 54px auto;
+    padding-top: 31px;
+    padding-left: 67px;
+    text-align: start;
+}
+.chart_head,
+.chart_content {
+    padding-bottom: 35px;
+    font-size: 16px;
+}
+.chart_head {
+    color: #e2b725;
+}
+.chart_content {
+    padding-left: 81px;
+}
+.work_message {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+.work_message_title {
+    padding-top: 26px;
+    padding-left: 32px;
+    font-size: 16px;
+}
+.work_message_title span {
+    font-family: "Zen Maru Gothic", sans-serif;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+}
+.work_title_heart {
+    position: absolute;
+    top: 6%;
+    left: 3%;
+    z-index: -1;
+}
+.work_text2 {
+    margin: 0 auto;
+    width: 82%;
+    padding-top: 26px;
+}
+.work_text2 p {
+    font-size: 15px;
+    line-height: 1.93;
+}
+.detail_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    width: 160px;
+    height: 40px;
+    border: 1px solid #b20700;
+    background-color: #b20700;
+    border-radius: 100vh;
+    text-align: end;
+    margin-bottom: 96px;
+    position: relative;
+}
+.detail_btn:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 30px;
+    border-radius: 100vh;
+    border: 1px dashed #fff;
+}
+.detail_btn p {
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+}
+.contact_icon {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    position: relative;
+}
+.contact_pic {
+    width: 224px;
+    display: inline-block;
+    padding-top: 61px;
+    padding-bottom: 12px;
+}
+.contact_icon p {
+    font-size: 12px;
+}
+.contact_btn {
+    position: absolute;
+    top: 26px;
+    right: 48%;
+}
+.footer_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 19px 27% 0 33%;
+    box-sizing: border-box;
+    padding-top: 356px;
+}
+.pc_nav_footer ul {
+    display: flex;
+}
+.pc_nav_footer ul li {
+    color: #550700;
+    font-size: 13px;
+    padding-right: 70px;
+    text-align: center;
+}
+.footer_contact {
+    color: #b20700;
+}
+.copyright p {
+    margin: 0 auto;
+    text-align: center;
+    color: #550700;
+    font-size: 12px;
+    font-family: "Montserrat Alternates", sans-serif;
+    padding-top: 87px;
+    padding-bottom: 21px;
+}
