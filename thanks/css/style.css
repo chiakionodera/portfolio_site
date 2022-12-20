@@ -1,0 +1,98 @@
+@charset "utf-8";
+body {
+    font-family: "Kosugi+Maru", sans-serif;
+    min-width: 1280px;
+    overflow-x: hidden;
+    background-color: #ffe2b5;
+}
+.thanks_message {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    position: relative;
+}
+.top_img {
+    position: absolute;
+    top: -2%;
+    left: 2%;
+}
+.thanks_text {
+    display: inline-block;
+    text-align: left;
+    padding-top: 174px;
+}
+.text1 {
+    font-size: 17px;
+}
+.text2 {
+    padding-top: 35px;
+    font-size: 15px;
+    line-height: 1.93;
+}
+.all_thanks {
+    width: 348px;
+    position: absolute;
+    top: 60%;
+    right: 3%;
+    z-index: 1;
+}
+.top_link {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+.kainagi_back {
+    width: 150px;
+    margin: 0 auto;
+    padding-top: 122px;
+    z-index: 1;
+}
+.back_message {
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 36%;
+}
+footer {
+    background-image: url(../images/footer_back_1@2x.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+    overflow-y: hidden;
+    margin-top: -150px;
+    z-index: 0;
+}
+.footer_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 19px 27% 0 33%;
+    box-sizing: border-box;
+    padding-top: 356px;
+}
+.pc_nav_footer ul {
+    display: flex;
+}
+.pc_nav_footer ul li {
+    color: #550700;
+    font-size: 13px;
+    padding-right: 70px;
+    text-align: center;
+}
+
+.footer_contact {
+    color: #b20700;
+}
+.copyright p {
+    margin: 0 auto;
+    text-align: center;
+    color: #550700;
+    font-size: 12px;
+    font-family: "Montserrat Alternates", sans-serif;
+    padding-top: 87px;
+    padding-bottom: 21px;
+}

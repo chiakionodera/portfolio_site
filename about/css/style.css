@@ -1,49 +1,5 @@
 @charset "utf-8";
 
-/* cssリセット */
-
-/*利用するタグによってこちらの内容は増やす*/
-
-html,
-body,
-h1,
-h2,
-h3,
-p,
-dl,
-dt,
-dd,
-ul,
-li {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    /*デフォルトの文字色、font-familyを予め当てておく*/
-    font-family: "Kosugi Maru", sans-serif;
-    color: #191919;
-}
-
-a {
-    /*下線を消す*/
-    text-decoration: none;
-    /*色を消す*/
-    color: inherit;
-    transition: 0.3s;
-}
-a:hover {
-    opacity: 0.5;
-}
-
-ul {
-    /*左の「・」を消す*/
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    vertical-align: bottom;
-    border: none;
-}
 body {
     font-family: "小杉丸", sans-serif;
     min-width: 1280px;
@@ -133,7 +89,8 @@ body {
 .about_name {
     display: flex;
     justify-content: center;
-    padding-top: 35px;
+    padding-top: 155px;
+    margin-top: -120px;
     background-color: #b20700;
     padding-bottom: 66px;
 }
@@ -303,14 +260,26 @@ body {
     display: inline-block;
     padding-top: 61px;
     padding-bottom: 12px;
+    z-index: 1;
 }
 .contact_icon p {
     font-size: 12px;
+    z-index: 1;
 }
 .contact_btn {
     position: absolute;
     top: 26px;
     right: 48%;
+}
+footer {
+    background-image: url(../images/footer_back.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+    overflow-y: hidden;
+    margin-top: -150px;
+    z-index: 0;
 }
 .footer_wrap {
     display: flex;

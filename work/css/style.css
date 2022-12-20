@@ -1,49 +1,5 @@
 @charset "utf-8";
 
-/* cssリセット */
-
-/*利用するタグによってこちらの内容は増やす*/
-
-html,
-body,
-h1,
-h2,
-h3,
-p,
-dl,
-dt,
-dd,
-ul,
-li {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    /*デフォルトの文字色、font-familyを予め当てておく*/
-    font-family: "Kosugi Maru", sans-serif;
-    color: #191919;
-}
-
-a {
-    /*下線を消す*/
-    text-decoration: none;
-    /*色を消す*/
-    color: inherit;
-    transition: 0.3s;
-}
-a:hover {
-    opacity: 0.5;
-}
-
-ul {
-    /*左の「・」を消す*/
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    vertical-align: bottom;
-    border: none;
-}
 body {
     font-family: "小杉丸", sans-serif;
     min-width: 1280px;
@@ -99,7 +55,7 @@ body {
     background-color: #ffe2b5;
     position: relative;
 }
-.works_title::after {
+.works_message::before {
     content: "";
     position: absolute;
     top: 0;
@@ -109,7 +65,7 @@ body {
     background-image: url(../images/works_bg@2x.png);
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: top;
 }
 .works_title h2 {
     font-size: 46px;
@@ -184,20 +140,28 @@ body {
     bottom: 30%;
     left: 28%;
 }
+#top {
+    position: relative;
+}
 .tab {
     position: relative;
 }
 .tab-list {
     display: flex;
 }
+.tab-list_bottom {
+    display: flex;
+}
 .btn1 {
     font-size: 15px;
     padding-bottom: 7px;
+    font-family: "Kosugi Maru", sans-serif;
 }
 .btn2 {
     font-size: 11px;
     font-family: "Montserrat Alternates", sans-serif;
 }
+
 .tab-list-item1 {
     width: 200px;
     text-align: center;
@@ -228,6 +192,38 @@ body {
     border: 1px solid #ffe2b5;
     background-color: #ffe2b5;
     border-top-right-radius: 12px;
+    cursor: pointer;
+}
+.tab-list-item4 {
+    width: 200px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #ede0b9;
+    background-color: #ede0b9;
+    border-bottom-right-radius: 12px;
+    margin-right: 36px;
+    cursor: pointer;
+}
+.tab-list-item5 {
+    width: 200px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #ebd180;
+    background-color: #ebd180;
+    border-bottom-right-radius: 12px;
+    margin-right: 74px;
+    cursor: pointer;
+}
+.tab-list-item6 {
+    width: 300px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #ffe2b5;
+    background-color: #ffe2b5;
+    border-bottom-right-radius: 12px;
     cursor: pointer;
 }
 .tab-contents {
@@ -262,6 +258,24 @@ body {
 }
 .tab-bottom2 {
     background-color: #ede0b9;
+    height: 79px;
+    margin-top: 144px;
+}
+.tab-bottom3 {
+    background-color: #ebd180;
+    height: 79px;
+}
+.tab-bottom4 {
+    background-color: #ebd180;
+    height: 79px;
+    margin-top: 144px;
+}
+.tab-bottom5 {
+    background-color: #ffe2b5;
+    height: 79px;
+}
+.tab-bottom6 {
+    background-color: #ffe2b5;
     height: 79px;
     margin-top: 144px;
 }
@@ -351,13 +365,40 @@ body {
     padding-left: 67px;
     text-align: start;
 }
+.work_chart2 {
+    width: 592px;
+    background-color: #ffffff;
+    border: 1px dashed #b20700;
+    border-radius: 12px;
+    margin: 54px auto;
+    padding-top: 31px;
+    padding-left: 67px;
+    text-align: start;
+}
+.work_chart3 {
+    width: 592px;
+    background-color: #ffffff;
+    border: 1px dashed #008473;
+    border-radius: 12px;
+    margin: 54px auto;
+    padding-top: 31px;
+    padding-left: 67px;
+    text-align: start;
+}
 .chart_head,
 .chart_content {
     padding-bottom: 35px;
     font-size: 16px;
+    line-height: 1.56;
 }
 .chart_head {
     color: #e2b725;
+}
+.chart_head2 {
+    color: #b20700;
+}
+.chart_head3 {
+    color: #008473;
 }
 .chart_content {
     padding-left: 81px;
@@ -436,14 +477,26 @@ body {
     display: inline-block;
     padding-top: 61px;
     padding-bottom: 12px;
+    z-index: 1;
 }
 .contact_icon p {
     font-size: 12px;
+    z-index: 1;
 }
 .contact_btn {
     position: absolute;
     top: 26px;
     right: 48%;
+}
+footer {
+    background-image: url(../images/footer_back.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+    overflow-y: hidden;
+    margin-top: -150px;
+    z-index: 0;
 }
 .footer_wrap {
     display: flex;
@@ -463,6 +516,7 @@ body {
     padding-right: 70px;
     text-align: center;
 }
+
 .footer_contact {
     color: #b20700;
 }

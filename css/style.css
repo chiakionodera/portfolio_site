@@ -1,49 +1,5 @@
 @charset "utf-8";
 
-/* cssリセット */
-
-/*利用するタグによってこちらの内容は増やす*/
-
-html,
-body,
-h1,
-h2,
-h3,
-p,
-dl,
-dt,
-dd,
-ul,
-li {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    /*デフォルトの文字色、font-familyを予め当てておく*/
-    font-family: "Kosugi Maru", sans-serif;
-    color: #191919;
-}
-
-a {
-    /*下線を消す*/
-    text-decoration: none;
-    /*色を消す*/
-    color: inherit;
-    transition: 0.3s;
-}
-a:hover {
-    opacity: 0.5;
-}
-
-ul {
-    /*左の「・」を消す*/
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    vertical-align: bottom;
-    border: none;
-}
 body {
     font-family: "小杉丸", sans-serif;
     min-width: 1280px;
@@ -83,6 +39,11 @@ body {
     width: 21px;
     padding-top: 14px;
 }
+@media screen and (max-width: 767px) {
+    .sns_fixed {
+        display: none;
+    }
+}
 .header_wrap {
     display: flex;
     justify-content: space-between;
@@ -91,9 +52,17 @@ body {
     padding: 14px 21% 0 13%;
     box-sizing: border-box;
 }
+
 .logo {
     width: 135px;
 }
+@media screen and (max-width: 767px) {
+    .logo {
+        width: 100px;
+        margin-left: 0 auto;
+    }
+}
+
 .pc_nav ul {
     display: flex;
     justify-content: space-between;
@@ -114,7 +83,6 @@ body {
     padding: 24px 0;
     text-align: center;
 }
-
 .header_contact {
     width: 60px;
     height: 60px;
@@ -126,6 +94,114 @@ body {
 .header_contact .letter {
     margin: 19px 0;
 }
+.sp_nav,
+.humburger {
+    display: none;
+}
+.sp_img {
+    display: none;
+}
+
+@media screen and (max-width: 1010px) {
+    .pc_nav,
+    .header_contact {
+        display: none;
+    }
+    .humburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 3;
+    }
+    .humburger span {
+        display: block;
+        position: relative;
+        top: 10px;
+        width: 30px;
+        height: 4px;
+        border-radius: 2px;
+        background: #b20700;
+        transition: 0.3s;
+    }
+    .humburger span::before,
+    .humburger span::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        border-radius: 2px;
+        background: #b20700;
+        transition: 0.3s;
+    }
+    .humburger span::before {
+        bottom: 10px;
+    }
+    .humburger span::after {
+        top: 10px;
+    }
+    .humburger.open span {
+        background: transparent;
+    }
+    .humburger.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+        background: #c8a73d;
+    }
+
+    .humburger.open span::after {
+        top: 0;
+        transform: rotate(135deg);
+        background: #c8a73d;
+    }
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgb(178, 7, 0, 0.8);
+        z-index: 2;
+    }
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .sp_nav_top {
+        padding-top: 56px;
+    }
+    .sp_nav ul li {
+        padding: 56px 0;
+        color: #ffffff;
+        font-size: 15px;
+        z-index: 1;
+    }
+    .sp_nav .sp_sns {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 25px;
+        right: 41%;
+        z-index: 2;
+    }
+    .icon_hb {
+        padding-right: 25px;
+    }
+    .hb_sui {
+        display: block;
+        width: 105px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+}
+
 .top_title {
     position: relative;
 }
@@ -135,10 +211,17 @@ body {
     right: 49%;
     bottom: 13%;
 }
+
 .top_title_heart {
     position: absolute;
     right: 54%;
     bottom: 47%;
+}
+@media screen and (max-width: 767px) {
+    .top_title_image,
+    .top_title_heart {
+        display: none;
+    }
 }
 .top_text {
     font-size: 52px;
@@ -149,6 +232,7 @@ body {
     font-weight: bold;
     padding-top: 141px;
 }
+
 .top_text span {
     font-size: 45px;
     display: inline-block;
@@ -158,10 +242,26 @@ body {
     color: transparent;
     -webkit-text-stroke: 1px #fff;
 }
+@media screen and (max-width: 767px) {
+    .top_text {
+        font-size: 49px;
+        padding-top: 145px;
+    }
+    .top_text span {
+        display: block;
+        font-size: 46px;
+        padding: 5px 0;
+    }
+}
 .children {
     display: flex;
     justify-content: center;
     padding-top: 100px;
+}
+@media screen and (max-width: 767px) {
+    .children {
+        display: block;
+    }
 }
 .children p {
     font-size: 20px;
@@ -186,6 +286,11 @@ body {
     top: -19%;
     right: 49%;
     z-index: 1;
+}
+@media screen and (max-width: 767px) {
+    .kai_top_pic {
+        transform: rotate(90deg);
+    }
 }
 .sui_top {
     position: relative;
