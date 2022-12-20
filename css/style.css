@@ -8,6 +8,11 @@ body {
     max-width: 1440px;
     margin: 0 auto;
 }
+@media screen and (max-width: 767px) {
+    body {
+        min-width: initial;
+    }
+}
 #header {
     background-color: #e2b725;
     position: relative;
@@ -290,6 +295,9 @@ body {
 @media screen and (max-width: 767px) {
     .kai_top_pic {
         transform: rotate(90deg);
+        width: 122px;
+        position: absolute;
+        top: 0;
     }
 }
 .sui_top {
@@ -362,6 +370,16 @@ body {
     top: 534px;
     right: 13px;
     z-index: 1;
+}
+@media screen and (max-width: 767px) {
+    .heart1,
+    .heart2,
+    .heart3,
+    .heart4,
+    .heart5,
+    .heart6 {
+        display: none;
+    }
 }
 #about {
     background-color: #fbfbfb;
