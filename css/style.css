@@ -17,6 +17,11 @@ body {
     background-color: #e2b725;
     position: relative;
 }
+@media screen and (max-width: 767px) {
+    #header {
+        position: relative;
+    }
+}
 .sns_fixed {
     position: fixed;
     display: flex;
@@ -57,14 +62,18 @@ body {
     padding: 14px 21% 0 13%;
     box-sizing: border-box;
 }
+@media screen and (max-width: 767px) {
+    .header_wrap {
+        padding: 0;
+    }
+}
 
 .logo {
     width: 135px;
 }
 @media screen and (max-width: 767px) {
     .logo {
-        width: 100px;
-        margin-left: 0 auto;
+        width: 102px;
     }
 }
 
@@ -100,7 +109,9 @@ body {
     margin: 19px 0;
 }
 .sp_nav,
-.humburger {
+.humburger,
+.humburger_bg,
+.humburger_menu {
     display: none;
 }
 .sp_img {
@@ -112,12 +123,21 @@ body {
     .header_contact {
         display: none;
     }
+    .humburger_bg {
+        display: inline-block;
+        width: 91px;
+        height: 83px;
+        border-radius: 0 0 0 100%;
+        background: #ffffff;
+        margin-right: 0 auto;
+    }
+
     .humburger {
         display: block;
         position: absolute;
         top: 20px;
-        right: 25px;
-        height: 30px;
+        right: 15px;
+        height: 18px;
         cursor: pointer;
         z-index: 3;
     }
@@ -161,6 +181,12 @@ body {
         top: 0;
         transform: rotate(135deg);
         background: #c8a73d;
+    }
+    .humburger_menu p {
+        font-size: 6px;
+        font-family: "Montserrat Alternates", sans-serif;
+        position: absolute;
+        top: 10px;
     }
     .sp_nav {
         position: absolute;
@@ -223,6 +249,9 @@ body {
     bottom: 47%;
 }
 @media screen and (max-width: 767px) {
+    .top_title {
+        position: static;
+    }
     .top_title_image,
     .top_title_heart {
         display: none;
@@ -250,7 +279,7 @@ body {
 @media screen and (max-width: 767px) {
     .top_text {
         font-size: 49px;
-        padding-top: 145px;
+        padding-top: 100px;
     }
     .top_text span {
         display: block;
@@ -266,6 +295,8 @@ body {
 @media screen and (max-width: 767px) {
     .children {
         display: block;
+        padding-top: 0;
+        padding-bottom: 115px;
     }
 }
 .children p {
@@ -293,11 +324,30 @@ body {
     z-index: 1;
 }
 @media screen and (max-width: 767px) {
-    .kai_top_pic {
+    .kai_top {
+        position: static;
         transform: rotate(90deg);
+    }
+    .kai_top_pic {
         width: 122px;
         position: absolute;
         top: 0;
+        left: -10%;
+        margin-top: 90px;
+    }
+    .kai_alert {
+        position: absolute;
+        top: 0;
+        left: -10%;
+        margin-top: 80px;
+        width: 12px;
+    }
+    .kai_top p {
+        position: absolute;
+        top: 0;
+        left: -10%;
+        margin-top: 33px;
+        font-size: 9px;
     }
 }
 .sui_top {
@@ -318,6 +368,33 @@ body {
     right: 42%;
     z-index: 1;
 }
+@media screen and (max-width: 767px) {
+    .sui_top {
+        position: static;
+        transform: rotate(-90deg);
+    }
+    .sui_top_pic {
+        width: 125px;
+        position: absolute;
+        top: 0;
+        right: 9%;
+        margin-top: 90px;
+    }
+    .sui_alert {
+        position: absolute;
+        top: 0;
+        right: 26%;
+        margin-top: 55px;
+        width: 12px;
+    }
+    .sui_top p {
+        position: absolute;
+        top: 0;
+        right: 22%;
+        margin-top: 72px;
+        font-size: 9px;
+    }
+}
 .nagi_top {
     position: relative;
 }
@@ -336,6 +413,33 @@ body {
     top: -15%;
     right: 13%;
     z-index: 1;
+}
+@media screen and (max-width: 767px) {
+    .nagi_top {
+        position: static;
+        transform: rotate(90deg);
+    }
+    .nagi_top_pic {
+        width: 144px;
+        position: absolute;
+        top: 0;
+        left: 41%;
+        margin-top: 80px;
+    }
+    .nagi_alert {
+        position: absolute;
+        top: 0;
+        left: 77%;
+        margin-top: 63px;
+        width: 12px;
+    }
+    .nagi_top p {
+        position: absolute;
+        top: 0;
+        left: 66%;
+        margin-top: 75px;
+        font-size: 9px;
+    }
 }
 .top_back {
     background-size: cover;
@@ -371,6 +475,11 @@ body {
     right: 13px;
     z-index: 1;
 }
+.sp_top_heart1,
+.sp_top_heart2,
+.sp_top_heart3 {
+    display: none;
+}
 @media screen and (max-width: 767px) {
     .heart1,
     .heart2,
@@ -379,6 +488,27 @@ body {
     .heart5,
     .heart6 {
         display: none;
+    }
+    .sp_top_heart1 {
+        display: block;
+        width: 66px;
+        position: absolute;
+        top: 18%;
+        right: 35%;
+    }
+    .sp_top_heart2 {
+        display: block;
+        width: 57px;
+        position: absolute;
+        top: 53%;
+        left: 6%;
+    }
+    .sp_top_heart3 {
+        display: block;
+        width: 92px;
+        position: absolute;
+        bottom: -5%;
+        right: 10%;
     }
 }
 #about {
@@ -400,6 +530,45 @@ body {
     padding-right: 79px;
     position: relative;
 }
+
+.title_red1 {
+    font-size: 65px;
+    display: inline-block;
+    transform: rotate(-330deg);
+    color: #b20700;
+    margin-bottom: 14px;
+}
+.about_title1 {
+    padding-top: 100px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+}
+.about_title2 {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    padding-top: 167px;
+}
+
+.question {
+    transform: rotate(-330deg);
+    display: inline-block;
+}
+@media screen and (max-width: 767px) {
+    .about_title {
+        font-size: 20px;
+        padding-right: 53px;
+    }
+    .title_red1 {
+        font-size: 46px;
+        margin-bottom: 5px;
+    }
+    .about_title1 {
+        padding-top: 31px;
+    }
+    .about_title2 {
+        padding-top: 90px;
+    }
+}
 .about_alert2 {
     position: absolute;
     top: 73%;
@@ -412,28 +581,18 @@ body {
     width: 140px;
     z-index: 1;
 }
-.about_title1 {
-    padding-top: 100px;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-}
-.about_title2 {
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    padding-top: 167px;
-}
-.title_red1 {
-    font-size: 65px;
-    display: inline-block;
-    transform: rotate(-330deg);
-    color: #b20700;
-    padding-bottom: 14px;
+@media screen and (max-width: 767px) {
+    .about_alert2 {
+        width: 45px;
+        right: 0;
+        top: 62%;
+    }
+    .about_alert1 {
+        right: 3%;
+        width: 57px;
+    }
 }
 
-.question {
-    transform: rotate(-330deg);
-    display: inline-block;
-}
 .about_walk {
     padding-top: 71px;
 }
@@ -446,6 +605,19 @@ body {
     width: 99px;
     display: inline-block;
     padding-right: 40px;
+}
+@media screen and (max-width: 767px) {
+    .about_walk {
+        padding-top: 62px;
+    }
+    .about_walk .kai_walk {
+        width: 56px;
+        padding-right: 51px;
+    }
+    .about_walk .nagi_walk {
+        width: 54px;
+        padding-right: 13px;
+    }
 }
 .about_box {
     text-align: center;
@@ -474,6 +646,25 @@ body {
     display: inline-block;
     text-align: left;
 }
+@media screen and (max-width: 767px) {
+    .about_message {
+        margin-top: -15px;
+        font-size: 16px;
+        line-height: 1.75;
+    }
+    .about_message span {
+        font-size: 21px;
+    }
+    .about_message2 {
+        padding-top: 21px;
+        line-height: 1.78;
+    }
+}
+@media screen and (min-width: 768px) {
+    .br-sp {
+        display: none;
+    }
+}
 .about_link {
     display: flex;
     justify-content: center;
@@ -492,6 +683,26 @@ body {
     top: 30%;
     left: 39%;
 }
+@media screen and (max-width: 767px) {
+    .about_link {
+        display: block;
+        text-align: center;
+    }
+    .about_link .about_btn_me {
+        width: 70px;
+        padding-top: 30px;
+        margin: 0 auto;
+    }
+    .about_link p {
+        font-size: 13px;
+        padding-top: 6px;
+    }
+    .about_btn {
+        width: 26px;
+        top: 14%;
+        left: 40%;
+    }
+}
 #i_can {
     background-color: #fff6e5;
 }
@@ -504,6 +715,11 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding-top: 77px;
+}
+@media screen and (max-width: 767px) {
+    .contact_contents {
+        padding-top: 33px;
+    }
 }
 .can_title {
     font-size: 32px;
@@ -519,31 +735,77 @@ body {
     display: inline-block;
     transform: rotate(-30deg);
     color: #b20700;
-    padding-bottom: 14px;
+    margin-bottom: 14px;
 }
 .nagi_jump {
     width: 136px;
-    padding-left: 135px;
+    margin-left: 135px;
 }
+@media screen and (max-width: 767px) {
+    .can_title {
+        font-size: 20px;
+        padding-left: 65px;
+    }
+    .title_red2 {
+        font-size: 46px;
+        margin-bottom: 5px;
+    }
+    .nagi_jump {
+        transform: scale(-1, 1);
+        width: 121px;
+        margin-left: 100px;
+    }
+}
+
 .can_message {
-    font-size: 18px;
-    letter-spacing: 0.12em;
     margin-top: -31px;
     text-align: center;
     position: relative;
+    z-index: 0;
 }
 .can_message p {
+    font-size: 18px;
+    letter-spacing: 0.12em;
     z-index: 1;
-}
-.ai_heart {
-    position: absolute;
-    bottom: -61%;
-    left: 42%;
-    z-index: 2;
 }
 .can_message span {
     color: #fff;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.12em;
+    z-index: 0;
 }
+@media screen and (max-width: 767px) {
+    .can_message {
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 11px;
+    }
+    .can_message p {
+        display: inline-block;
+        text-align: left;
+        line-height: 1.73;
+        letter-spacing: 0.05em;
+    }
+    .can_message span {
+        font-size: 19px;
+        letter-spacing: 0.05em;
+    }
+}
+.ai_heart {
+    position: absolute;
+    bottom: -58%;
+    left: 41.8%;
+    z-index: -1;
+}
+@media screen and (max-width: 767px) {
+    .ai_heart {
+        width: 45px;
+        bottom: 39%;
+        left: 49%;
+    }
+}
+
 .can_wrapper {
     display: flex;
     max-width: 1000px;
@@ -564,6 +826,22 @@ body {
     width: 285px;
     padding-bottom: 10px;
 }
+@media screen and (max-width: 767px) {
+    .can_wrapper {
+        display: block;
+        padding-top: 57px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .can_image1,
+    .can_image2,
+    .can_image3 {
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+}
+
 .can_container {
     max-width: 1060px;
     display: flex;
