@@ -856,11 +856,11 @@ body {
     text-align: center;
     margin-right: 12px;
 }
+
 .can_title1 {
     font-size: 19px;
     font-family: "Zen Maru Gothic", sans-serif;
     padding-top: 37px;
-    font-weight: bold;
 }
 .can_title2_1 {
     font-size: 14px;
@@ -951,6 +951,48 @@ body {
     display: inline-block;
     text-align: left;
 }
+@media screen and (max-width: 767px) {
+    .can_container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .can_box {
+        text-align: center;
+    }
+    .can_item1,
+    .can_item2,
+    .can_item3 {
+        text-align: center;
+        margin: 0 auto;
+        width: 86%;
+        height: auto;
+        margin-bottom: 35px;
+        padding-top: 32px;
+        padding-bottom: 28px;
+    }
+    .can_title1 {
+        padding-top: 0;
+        font-size: 16px;
+    }
+    .can_title2_1,
+    .can_title2_2,
+    .can_title2_3 {
+        font-size: 12px;
+    }
+    .can_title2_1::before,
+    .can_title2_2::before,
+    .can_title2_3::before {
+        bottom: -15px;
+    }
+    .can_text {
+        display: inline-block;
+        width: 82%;
+        text-align: left;
+        font-size: 14px;
+        padding-top: 18px;
+    }
+}
 #works {
     background-color: #fbfbfb;
     position: relative;
@@ -996,20 +1038,32 @@ body {
     writing-mode: vertical-rl;
     padding-top: 270px;
 }
+
 .works_stand {
     width: 95px;
     padding-top: 171px;
 }
+@media screen and (max-width: 767px) {
+    .works_title {
+        font-size: 20px;
+        padding-right: 53px;
+        padding-top: 158px;
+    }
+    .works_stand {
+        width: 73px;
+        padding-top: 66px;
+    }
+}
 .works_head {
+    position: absolute;
+    top: 10%;
+    left: 20%;
     width: 662px;
     height: 158px;
     display: flex;
     border: 3px solid #b20700;
     background-color: #fff;
     border-radius: 10px;
-    margin-top: 230px;
-    margin-right: 15px;
-    position: relative;
 }
 .works_message {
     width: 158px;
@@ -1023,6 +1077,7 @@ body {
     font-family: "Zen Maru Gothic", sans-serif;
     transform: rotate(-30deg);
 }
+
 .works_text {
     padding-left: 21px;
 }
@@ -1047,11 +1102,51 @@ body {
     font-size: 16px;
     color: #c8a73d;
 }
+@media screen and (max-width: 767px) {
+    .works_head {
+        flex-direction: column;
+        width: 322px;
+        height: auto;
+        top: 7%;
+        left: 6%;
+    }
+    .works_text {
+        order: 1;
+        padding-left: 17px;
+    }
+    .works_text1 {
+        line-height: 1.71;
+        padding-top: 11px;
+    }
+    .works_text2 {
+        line-height: 1.71;
+        padding-top: 14px;
+        padding-bottom: 17px;
+    }
+    .message1 {
+        font-size: 10px;
+        top: 70%;
+        right: 3%;
+    }
+    .works_message {
+        width: 94px;
+        margin-left: auto;
+        order: 2;
+        margin-top: -95px;
+    }
+}
 .all_curtain {
     width: 346px;
     position: absolute;
     left: -15px;
     top: 0px;
+}
+@media screen and (max-width: 767px) {
+    .all_curtain {
+        width: 144px;
+        top: -36px;
+        left: -8px;
+    }
 }
 .works_alert1 {
     position: absolute;
@@ -1063,6 +1158,12 @@ body {
     top: 458px;
     left: 277px;
 }
+@media screen and (max-width: 767px) {
+    .works_alert1,
+    .works_alert2 {
+        display: none;
+    }
+}
 .works_wrapper {
     max-width: 1160px;
     display: flex;
@@ -1071,7 +1172,12 @@ body {
     margin: 0 auto;
     padding-top: 106px;
 }
-
+@media screen and (max-width: 767px) {
+    .works_wrapper {
+        padding-top: 250px;
+        justify-content: center;
+    }
+}
 .works_box {
     text-align: center;
 }
@@ -1080,6 +1186,7 @@ body {
     padding-bottom: 11px;
     display: inline-block;
 }
+
 .works_desc {
     width: 343px;
     font-size: 13px;
@@ -1150,6 +1257,35 @@ body {
     padding-top: 94px;
     padding-bottom: 125px;
     position: relative;
+}
+@media screen and (max-width: 767px) {
+    .works_image {
+        width: 175px;
+        padding-bottom: 5px;
+    }
+    .works_desc {
+        width: 165px;
+        font-size: 12px;
+        line-height: 1.25;
+    }
+    .works_title1_red,
+    .works_title1_yellow,
+    .works_title1_green {
+        font-size: 17px;
+    }
+    .works_title2_red,
+    .works_title2_yellow,
+    .works_title2_green {
+        font-size: 10px;
+    }
+    .works_btn {
+        margin: 0 auto;
+        width: 110px;
+        height: 26px;
+    }
+    .works_btn p {
+        font-size: 8px;
+    }
 }
 .sakuhinsyu_kainagi {
     width: 79px;
@@ -1226,6 +1362,11 @@ body {
     right: 56%;
 }
 footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 43vw;
+    min-height: 565px;
     background-image: url(../images/footer_back.png);
     background-size: 100% auto;
     background-repeat: no-repeat;

@@ -465,12 +465,14 @@ body {
     font-size: 12px;
 }
 .contact_icon {
+    position: absolute;
+    top: 0;
+    right: 12%;
     max-width: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: auto;
-    position: relative;
 }
 .contact_pic {
     width: 224px;
@@ -489,23 +491,22 @@ body {
     right: 48%;
 }
 footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     background-image: url(../images/footer_back.png);
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: bottom;
     position: relative;
     overflow-y: hidden;
-    margin-top: -150px;
     z-index: 0;
+    height: 43vw;
+    min-height: 565px;
 }
-.footer_wrap {
+.pc_nav_footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 19px 27% 0 33%;
-    box-sizing: border-box;
-    padding-top: 356px;
+    justify-content: center;
 }
 .pc_nav_footer ul {
     display: flex;
