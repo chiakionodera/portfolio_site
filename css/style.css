@@ -1022,6 +1022,14 @@ body {
     background-repeat: no-repeat;
     background-position: bottom;
 }
+@media screen and (max-width: 767px) {
+    #works::before {
+        background-image: url(../images/sp_work_bg@2x.png);
+    }
+    #works::after {
+        background-image: url(../images/sp_contact_bg@2x.png);
+    }
+}
 .works_contents {
     display: flex;
     justify-content: flex-end;
@@ -1107,7 +1115,7 @@ body {
         flex-direction: column;
         width: 322px;
         height: auto;
-        top: 7%;
+        top: 16%;
         left: 6%;
     }
     .works_text {
@@ -1175,7 +1183,7 @@ body {
 @media screen and (max-width: 767px) {
     .works_wrapper {
         padding-top: 250px;
-        justify-content: center;
+        justify-content: space-evenly;
     }
 }
 .works_box {
@@ -1251,13 +1259,6 @@ body {
     color: #fff;
     font-size: 12px;
 }
-.sakuhinsyu_link {
-    display: flex;
-    justify-content: center;
-    padding-top: 94px;
-    padding-bottom: 125px;
-    position: relative;
-}
 @media screen and (max-width: 767px) {
     .works_image {
         width: 175px;
@@ -1267,6 +1268,8 @@ body {
         width: 165px;
         font-size: 12px;
         line-height: 1.25;
+        padding-top: 14px;
+        min-height: 123px;
     }
     .works_title1_red,
     .works_title1_yellow,
@@ -1280,12 +1283,21 @@ body {
     }
     .works_btn {
         margin: 0 auto;
+        margin-bottom: 44px;
+        text-align: center;
         width: 110px;
         height: 26px;
     }
     .works_btn p {
         font-size: 8px;
     }
+}
+.sakuhinsyu_link {
+    display: flex;
+    justify-content: center;
+    padding-top: 94px;
+    padding-bottom: 125px;
+    position: relative;
 }
 .sakuhinsyu_kainagi {
     width: 79px;
@@ -1298,6 +1310,26 @@ body {
     position: absolute;
     top: 15%;
     left: 37%;
+}
+@media screen and (max-width: 767px) {
+    .sakuhinsyu_link {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 57px;
+        padding-bottom: 43px;
+    }
+    .sakuhinsyu_kainagi {
+        width: 47px;
+    }
+    .sakuhinsyu_link_text {
+        font-size: 13px;
+        padding-top: 5px;
+    }
+    .sakuhinsyu_btn {
+        width: 28px;
+        top: 21%;
+        left: 35%;
+    }
 }
 #contact {
     background-color: #fff6e5;
@@ -1323,6 +1355,25 @@ body {
     position: absolute;
     top: 13%;
     left: -53%;
+}
+@media screen and (max-width: 767px) {
+    #contact {
+        padding-top: 35px;
+    }
+    .contact_contents {
+        flex-direction: column;
+    }
+    .contact_title {
+        font-size: 20px;
+        margin-right: auto;
+    }
+    .sui_sit {
+        width: 116px;
+        transform: rotate(339deg);
+        transform: rotateY(180deg);
+        top: 21%;
+        left: 120%;
+    }
 }
 .contact_box {
     width: 627px;
@@ -1352,6 +1403,28 @@ body {
     display: inline-block;
     padding-bottom: 17px;
 }
+@media screen and (max-width: 767px) {
+    .contact_box {
+        width: 90%;
+        margin: 21px auto 8px auto;
+        padding-top: 26px;
+    }
+    .contact_text {
+        line-height: 1.5;
+        letter-spacing: 0em;
+    }
+    .br-pc {
+        display: none;
+    }
+    .contact_text1,
+    .contact_text2 {
+        padding-bottom: 17px;
+    }
+    .sui_contact {
+        width: 50px;
+        padding-bottom: 5px;
+    }
+}
 .contact_link p {
     font-size: 12px;
     padding-bottom: 71px;
@@ -1360,6 +1433,18 @@ body {
     position: absolute;
     top: 57%;
     right: 56%;
+}
+@media screen and (max-width: 767px) {
+    .contact_link p {
+        font-size: 11px;
+
+        padding-bottom: 30px;
+    }
+    .contact_btn {
+        width: 26px;
+        top: 66%;
+        right: 56%;
+    }
 }
 footer {
     display: flex;
@@ -1411,4 +1496,18 @@ footer {
     position: absolute;
     bottom: -60px;
     right: 150px;
+}
+@media screen and (max-width: 767px) {
+    .footer {
+        padding-top: 0px;
+    }
+    .pc_nav_footer ul {
+        display: none;
+    }
+    .copyright p {
+        font-size: 7px;
+    }
+    .sui_back {
+        display: none;
+    }
 }
