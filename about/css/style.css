@@ -6,6 +6,11 @@ body {
     overflow-x: hidden;
     background-color: #fff6e5;
 }
+@media screen and (max-width: 767px) {
+    body {
+        min-width: initial;
+    }
+}
 
 .header_wrap {
     display: flex;
@@ -15,8 +20,18 @@ body {
     padding: 14px 21% 0 13%;
     box-sizing: border-box;
 }
+@media screen and (max-width: 767px) {
+    .header_wrap {
+        padding: 0;
+    }
+}
 .logo {
     width: 135px;
+}
+@media screen and (max-width: 767px) {
+    .logo {
+        width: 102px;
+    }
 }
 .pc_nav ul {
     display: flex;
@@ -46,11 +61,125 @@ body {
 .header_contact .letter {
     margin: 19px 0;
 }
+.sp_nav,
+.humburger,
+.humburger_bg,
+.humburger_menu {
+    display: none;
+}
+@media screen and (max-width: 1010px) {
+    .pc_nav,
+    .header_contact {
+        display: none;
+    }
+    .humburger_bg {
+        display: inline-block;
+        width: 91px;
+        height: 83px;
+        border-radius: 0 0 0 100%;
+        background: #ffffff;
+        margin-right: 0 auto;
+    }
+
+    .humburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        height: 18px;
+        cursor: pointer;
+        z-index: 3;
+    }
+    .humburger span {
+        display: block;
+        position: relative;
+        top: 10px;
+        width: 30px;
+        height: 4px;
+        border-radius: 2px;
+        background: #b20700;
+        transition: 0.3s;
+    }
+    .humburger span::before,
+    .humburger span::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        border-radius: 2px;
+        background: #b20700;
+        transition: 0.3s;
+    }
+    .humburger span::before {
+        bottom: 10px;
+    }
+    .humburger span::after {
+        top: 10px;
+    }
+    .humburger.open span {
+        background: transparent;
+    }
+    .humburger.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+        background: #c8a73d;
+    }
+
+    .humburger.open span::after {
+        top: 0;
+        transform: rotate(135deg);
+        background: #c8a73d;
+    }
+    .humburger_menu p {
+        font-size: 6px;
+        font-family: "Montserrat Alternates", sans-serif;
+        position: absolute;
+        top: 10px;
+    }
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgb(178, 7, 0, 0.8);
+        z-index: 2;
+    }
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .sp_nav_top {
+        padding-top: 56px;
+    }
+    .sp_nav ul li {
+        padding: 56px 0;
+        color: #ffffff;
+        font-size: 15px;
+        z-index: 1;
+    }
+    .sp_nav .sp_sns {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 25px;
+        right: 41%;
+        z-index: 2;
+    }
+    .icon_hb {
+        padding-right: 25px;
+    }
+}
 
 .me_title {
     display: flex;
     align-items: center;
     padding-top: 76px;
+    position: relative;
 }
 .yes {
     display: flex;
@@ -69,6 +198,11 @@ body {
     letter-spacing: 0.12em;
     margin-bottom: 27px;
 }
+.about_heart {
+    position: absolute;
+    top: 30%;
+    left: 32%;
+}
 .me_pic {
     width: 77px;
     margin-bottom: 58px;
@@ -78,13 +212,45 @@ body {
     font-size: 21px;
     letter-spacing: 0.12em;
 }
-.me_text span {
+.me_top span {
     font-size: 33px;
     color: #b20700;
+}
+@media screen and (max-width: 767px) {
+    .me_title {
+        padding-top: 43px;
+        justify-content: center;
+    }
+    .yes:before {
+        display: none;
+    }
+    .yes p {
+        font-size: 9px;
+    }
+    .about_heart {
+        width: 21px;
+        left: 10%;
+    }
+    .me_pic {
+        width: 56px;
+        margin-bottom: 51px;
+        padding-right: 11px;
+    }
+    .me_top {
+        font-size: 19px;
+    }
+    .me_top span {
+        font-size: 29px;
+    }
 }
 .about_pic {
     width: 900px;
     margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+    .about_pic {
+        width: 100%;
+    }
 }
 .about_name {
     display: flex;
@@ -136,6 +302,36 @@ body {
 .about_red_back img {
     vertical-align: bottom;
 }
+@media screen and (max-width: 767px) {
+    .about_name {
+        padding-bottom: 23px;
+    }
+    .name_space {
+        width: 41px;
+        margin-top: 16px;
+    }
+    .name {
+        padding-right: 5px;
+    }
+    .name1 {
+        font-size: 19px;
+    }
+    .name2 {
+        font-size: 10px;
+    }
+    .designer {
+        padding-left: 5px;
+    }
+    .designer p {
+        font-size: 14px;
+    }
+    .web {
+        padding-bottom: 5px;
+    }
+}
+.sp_kamereon_text {
+    display: none;
+}
 .kamereon_text p {
     font-size: 23px;
     padding-top: 88px;
@@ -162,6 +358,48 @@ body {
 .kamereon_image {
     width: 1000px;
     margin-top: -171px;
+}
+.sp_br {
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .kamereon_text {
+        display: none;
+    }
+    .sp_kamereon_text {
+        display: block;
+        font-size: 14px;
+        text-align: center;
+        position: relative;
+    }
+    .sp_kamereon_text .sp_1 {
+        padding-top: 25px;
+    }
+    .sp_kamereon_text .sp_2 {
+        padding-top: 29px;
+    }
+    .sp_kamereon_text .sp_2_alert {
+        font-size: 12px;
+        transform: rotate(-30deg);
+        position: absolute;
+        top: 70%;
+        left: 23%;
+    }
+    .kamereon_image {
+        width: 300px;
+        margin-top: -51px;
+    }
+
+    .kamereon_hover {
+        font-size: 10px;
+        padding-top: 26px;
+    }
+    .sp_br {
+        display: block;
+    }
+}
+.sp_bg1 {
+    display: none;
 }
 .me_container {
     border: 1px solid #fff;
@@ -207,6 +445,59 @@ body {
     bottom: 0;
     right: 0;
     width: 299px;
+}
+.sp_bg2 {
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .sp_bg1 {
+        display: block;
+        padding-top: 160px;
+        z-index: 1;
+    }
+    .me_container {
+        margin-right: auto;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .me_detail p {
+        padding-left: 26px;
+        padding-top: 30px;
+    }
+    .me_container h3 {
+        padding-top: 46px;
+        font-size: 17px;
+        padding-left: 26px;
+    }
+    .kai_monster {
+        transform: rotate(90deg);
+        width: 184px;
+        top: -175px;
+        right: -15px;
+        z-index: -1;
+    }
+    .nagi_monster {
+        transform: rotate(90deg);
+        bottom: 703px;
+        right: 211px;
+        width: 175px;
+        z-index: -1;
+    }
+    .br_sp {
+        display: block;
+    }
+    .me_top_alert {
+        width: 13px;
+        top: 29px;
+        left: 12px;
+    }
+    .me_text4 {
+        padding-bottom: 44px;
+    }
+    .sp_bg2 {
+        display: block;
+        z-index: 1;
+    }
 }
 .dream_container {
     border: 1px solid #fff;

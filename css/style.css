@@ -1469,6 +1469,9 @@ footer {
     box-sizing: border-box;
     padding-top: 356px;
 }
+.sp_sns_footer {
+    display: none;
+}
 .pc_nav_footer ul {
     display: flex;
     justify-content: flex-start;
@@ -1497,17 +1500,46 @@ footer {
     bottom: -60px;
     right: 150px;
 }
+.sui_back_text {
+    position: absolute;
+    bottom: 68px;
+    right: 35px;
+}
+.sui_back_text p {
+    font-size: 12px;
+    color: #ffffff;
+}
 @media screen and (max-width: 767px) {
-    .footer {
+    footer {
+        background-image: url(../images/sp_footer_bg@2x.png);
         padding-top: 0px;
+        min-height: initial;
+    }
+    .footer_wrap {
+        padding: 0 34% 0 3%;
     }
     .pc_nav_footer ul {
         display: none;
     }
+    .sp_sns_footer {
+        display: block;
+    }
+    .sp_sns_footer ul {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .sp_sns_footer ul li {
+        width: 12px;
+        padding-right: 10px;
+    }
+
     .copyright p {
         font-size: 7px;
+        padding-top: 0px;
+        padding-bottom: 6px;
     }
-    .sui_back {
+    .sui_back,
+    .sui_back_text {
         display: none;
     }
 }
