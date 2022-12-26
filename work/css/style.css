@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 body {
-    font-family: "小杉丸", sans-serif;
     min-width: 1280px;
     background-color: #fbfbfb;
     overflow-x: hidden;
@@ -477,7 +476,7 @@ body {
 .contact_pic {
     width: 224px;
     display: inline-block;
-    padding-top: 61px;
+    margin-top: 61px;
     padding-bottom: 12px;
     z-index: 1;
 }

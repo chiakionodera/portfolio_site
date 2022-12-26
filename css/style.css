@@ -114,10 +114,9 @@ body {
 .humburger_menu {
     display: none;
 }
-.sp_img {
+.sp_sns {
     display: none;
 }
-
 @media screen and (max-width: 1010px) {
     .pc_nav,
     .header_contact {
@@ -208,9 +207,9 @@ body {
         padding-top: 56px;
     }
     .sp_nav ul li {
-        padding: 56px 0;
+        padding: 10% 0;
         color: #ffffff;
-        font-size: 15px;
+        font-size: 18px;
         z-index: 1;
     }
     .sp_nav .sp_sns {
@@ -218,18 +217,46 @@ body {
         align-items: center;
         position: absolute;
         bottom: 25px;
-        right: 41%;
+        right: 18%;
         z-index: 2;
     }
     .icon_hb {
         padding-right: 25px;
     }
+    .sp_heart1 {
+        display: block;
+        width: 17%;
+        position: absolute;
+        top: 5%;
+        left: 18%;
+    }
+    .sp_heart2 {
+        display: block;
+        width: 9%;
+        position: absolute;
+        top: 31%;
+        right: 21%;
+    }
+    .sp_heart3 {
+        display: block;
+        width: 14%;
+        position: absolute;
+        bottom: 26%;
+        left: 6%;
+    }
     .hb_sui {
         display: block;
-        width: 105px;
+        width: 28%;
         position: absolute;
         top: 50%;
         left: 0;
+    }
+    .hb_kainagi {
+        display: block;
+        width: 29%;
+        position: absolute;
+        top: 29%;
+        right: 0;
     }
 }
 
@@ -890,7 +917,6 @@ body {
     width: 345px;
     height: 345px;
     text-align: center;
-    padding: 0 15px;
     margin-right: 12px;
 }
 .can_title2_2 {
@@ -987,7 +1013,7 @@ body {
     }
     .can_text {
         display: inline-block;
-        width: 82%;
+        width: 79%;
         text-align: left;
         font-size: 14px;
         padding-top: 18px;
@@ -1013,10 +1039,10 @@ body {
 #works::after {
     content: "";
     position: absolute;
-    top: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 53px;
     background-image: url(../images/work_back_footer.png);
     background-size: 100% auto;
     background-repeat: no-repeat;

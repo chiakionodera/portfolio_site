@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 body {
-    font-family: "小杉丸", sans-serif;
     min-width: 1280px;
     overflow-x: hidden;
     background-color: #fff6e5;
@@ -409,6 +408,18 @@ body {
     position: relative;
     margin-bottom: 67px;
 }
+.kai_monster {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 299px;
+}
+.nagi_monster {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 299px;
+}
 .me_container h3 {
     padding-top: 41px;
     padding-left: 49px;
@@ -434,18 +445,7 @@ body {
     top: 24px;
     left: 24px;
 }
-.kai_monster {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 299px;
-}
-.nagi_monster {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 299px;
-}
+
 .sp_bg2 {
     display: none;
 }
@@ -456,9 +456,13 @@ body {
         z-index: 1;
     }
     .me_container {
-        margin-right: auto;
+        margin: 0 auto;
         width: 100%;
         margin-bottom: 0px;
+    }
+    .monsters {
+        display: flex;
+        justify-content: space-between;
     }
     .me_detail p {
         padding-left: 26px;
@@ -472,16 +476,17 @@ body {
     .kai_monster {
         transform: rotate(90deg);
         width: 184px;
-        top: -175px;
-        right: -15px;
         z-index: -1;
+        top: -26%;
+        order: 2;
     }
     .nagi_monster {
         transform: rotate(90deg);
-        bottom: 703px;
-        right: 211px;
         width: 175px;
         z-index: -1;
+        bottom: 103%;
+        left: 0;
+        order: 1;
     }
     .br_sp {
         display: block;
@@ -499,12 +504,22 @@ body {
         z-index: 1;
     }
 }
+.sp_bg3 {
+    display: none;
+}
 .dream_container {
     border: 1px solid #fff;
     background-color: #fff;
     width: 942px;
     position: relative;
 }
+.sui_white {
+    position: absolute;
+    bottom: 28px;
+    left: 0;
+    width: 400px;
+}
+
 .dream_container h3 {
     padding-top: 41px;
     padding-left: 217px;
@@ -531,11 +546,43 @@ body {
     top: 22px;
     left: 190px;
 }
-.sui_white {
-    position: absolute;
-    bottom: 28px;
-    left: 0;
-    width: 400px;
+.sp_bg4 {
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .sp_bg3 {
+        display: block;
+        padding-top: 185px;
+    }
+    .dream_container {
+        margin: 0 auto;
+        width: 100%;
+    }
+    .sui_white {
+        width: 264px;
+        top: -42%;
+        left: 14%;
+        z-index: -1;
+    }
+    .dream_container h3 {
+        padding-top: 46px;
+        font-size: 17px;
+        padding-left: 26px;
+    }
+    .dream_detail p {
+        padding-left: 26px;
+        padding-top: 30px;
+    }
+    .dream_top_alert {
+        width: 13px;
+        top: 29px;
+        left: 12px;
+    }
+    .sp_bg4 {
+        display: block;
+        position: absolute;
+        z-index: -1;
+    }
 }
 .contact_icon {
     position: absolute;
@@ -551,7 +598,7 @@ body {
 .contact_pic {
     width: 224px;
     display: inline-block;
-    padding-top: 61px;
+    margin-top: 61px;
     padding-bottom: 12px;
     z-index: 1;
 }
@@ -563,6 +610,22 @@ body {
     position: absolute;
     top: 26px;
     right: 48%;
+}
+@media screen and (max-width: 767px) {
+    .contact_icon {
+        right: 23%;
+        top: -3%;
+        z-index: 1;
+    }
+    .contact_pic {
+        width: 189px;
+    }
+    .contact_icon p {
+        font-size: 13px;
+    }
+    .contact_btn {
+        right: 39%;
+    }
 }
 footer {
     display: flex;
@@ -577,6 +640,9 @@ footer {
     z-index: 0;
     height: 43vw;
     min-height: 565px;
+}
+.logo_footer {
+    display: none;
 }
 .pc_nav_footer {
     display: flex;
@@ -602,4 +668,27 @@ footer {
     font-family: "Montserrat Alternates", sans-serif;
     padding-top: 87px;
     padding-bottom: 21px;
+}
+@media screen and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
+        footer {
+            background-image: url(../images/sp_footer_bg@2x.png);
+            padding-top: 112px;
+            min-height: auto;
+        }
+        .logo_footer {
+            display: block;
+        }
+        .footer_wrap {
+            padding: 0 34% 0 3%;
+        }
+        .pc_nav_footer ul {
+            display: none;
+        }
+        .copyright p {
+            font-size: 7px;
+            padding-top: 0px;
+            padding-bottom: 6px;
+        }
+    }
 }
