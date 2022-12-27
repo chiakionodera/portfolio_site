@@ -4,12 +4,16 @@ body {
     overflow-x: hidden;
     background-color: #ffe2b5;
 }
+@media screen and (max-width: 767px) {
+    body {
+        min-width: initial;
+    }
+}
 .thanks_message {
     max-width: 1000px;
     margin: 0 auto;
     position: relative;
     text-align: center;
-    position: relative;
 }
 .top_img {
     position: absolute;
@@ -36,6 +40,31 @@ body {
     right: 3%;
     z-index: 1;
 }
+@media screen and (max-width: 767px) {
+    .thanks_message {
+        display: block;
+    }
+    .thanks_message,
+    .top_img,
+    .all_thanks {
+        position: static;
+    }
+    .top_img {
+        width: 93%;
+        margin-top: -14px;
+    }
+    .thanks_text {
+        padding-top: 65px;
+    }
+    .text1,
+    .text2 {
+        font-size: 15px;
+    }
+    .all_thanks {
+        width: 37%;
+        margin: -92px auto 0 auto;
+    }
+}
 .top_link {
     max-width: 1000px;
     margin: 0 auto;
@@ -54,6 +83,24 @@ body {
     top: 50%;
     left: 36%;
 }
+@media screen and (max-width: 767px) {
+    .top_link,
+    .back_message {
+        position: static;
+    }
+    .top_link {
+        display: block;
+    }
+    .kainagi_back {
+        width: 24%;
+        margin: 31px 17% 0px auto;
+        padding-top: 0px;
+    }
+    .back_message {
+        text-align: end;
+        margin: 4px 11% 0px auto;
+    }
+}
 footer {
     background-image: url(../images/footer_back_1@2x.png);
     background-size: 100% auto;
@@ -63,6 +110,9 @@ footer {
     overflow-y: hidden;
     margin-top: -150px;
     z-index: 0;
+}
+.logo_footer {
+    display: none;
 }
 .footer_wrap {
     display: flex;
@@ -94,4 +144,27 @@ footer {
     font-family: "Montserrat Alternates", sans-serif;
     padding-top: 87px;
     padding-bottom: 21px;
+}
+@media screen and (max-width: 767px) {
+    footer {
+        background-image: url(../images/sp_footer_bg@2x.png);
+        padding-top: 112px;
+        min-height: auto;
+        z-index: -1;
+    }
+    .logo_footer {
+        display: block;
+        width: 102px;
+    }
+    .footer_wrap {
+        padding: 0 34% 0 3%;
+    }
+    .pc_nav_footer ul {
+        display: none;
+    }
+    .copyright p {
+        font-size: 7px;
+        padding-top: 0px;
+        padding-bottom: 6px;
+    }
 }

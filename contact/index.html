@@ -47,6 +47,44 @@
                     <a href="../contact/index.html"><img src="images/contact_letter.png" alt="メール"></a>
                 </div>
             </div>
+            <div class="sp_fixed">
+                <div class="humburger_bg"></div>
+                <div class="humburger"><span></span></div>
+                <div class="humburger_menu">
+                    <p>menu</p>
+                </div>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li class="sp_nav_top"><a href="../about/index.html">私ってこんな人です</a></li>
+                    <li><a href="../index.html#i_can">私にできること</a></li>
+                    <li><a href="../work/index.html">私の作品</a></li>
+                    <li><a href="../contact/index.html">お問い合わせ</a></li>
+                </ul>
+                <div class="sp_sns">
+                    <div class="icon_hb"><a href=""><img src="images/hb_instagram.png" alt=""></a></div>
+                    <div class="icon_hb"><a href=""><img src="images/hb_twitter.png" alt=""></a></div>
+                    <div class="icon_hb"><a href=""><img src="images/hb_note.png" alt=""></a></div>
+                    <div class="icon_hb"><a href=""><img src="images/hb_youtube.png" alt=""></a></div>
+                </div>
+                <div class="sp_img">
+                    <div class="sp_heart1">
+                        <img src="images/hb_heart1.png" alt="" width:100%;>
+                    </div>
+                    <div class="sp_heart2">
+                        <img src="images/hb_heart2.png" alt="" width:100%;>
+                    </div>
+                    <div class="sp_heart3">
+                        <img src="images/hb_heart3.png" alt="" width:100%;>
+                    </div>
+                    <div class="hb_sui">
+                        <img src="images/hb_sui@2x.png" alt="" width:100%;>
+                    </div>
+                    <div class="hb_kainagi">
+                        <img src="images/hb_kainagi@2x.png" alt="" width:100%;>
+                    </div>
+                </div>
+            </nav>
         </div>
 
     </section>
@@ -55,9 +93,9 @@
     </div>
     <div class="contact_message">
         <div class="contact_text">
-            <p>「お仕事のご相談」はもちろんのこと気になることがございましたら
+            <p>「お仕事のご相談」はもちろんのこと<br class="br-sp">気になることがございましたら
                 <br>お気軽にお問い合わせください。
-                <br>みなさまの<span>アイ</span>の溢れるメッセージをお待ちしております。
+                <br>みなさまの<span>アイ</span>の溢れるメッセージを<br class="br-sp">お待ちしております。
                 <br>3営業日以内にお返事をいたします。
             </p>
         </div>
@@ -86,7 +124,7 @@
         <div class="btn">
             <button type="submit" class="form-btn" value="送信する">送信する</button>
             <div class="sui_push">
-                <img src="images/sui_push@2x.png" alt="">
+                <img src="images/sui_push@2x.png" alt="" width:100%;>
             </div>
         </div>
     </form>
@@ -95,6 +133,9 @@
         onload="if(submitted){window.location='../thanks/index.html';}"></iframe>
     <footer>
         <div class="footer_wrap">
+            <div class="logo_footer">
+                <div><img src="images/contact_logo@2x.png" alt="カメレオンのロゴ"></div>
+            </div>
             <nav class="pc_nav_footer">
                 <ul>
                     <li><a href="../about/index.html">私について</a></li>
@@ -108,6 +149,16 @@
             <p>© 2022 Chiaki studio All rights reserved</p>
         </div>
     </footer>
+    <script>
+        $(function () {
+            //ハンバーガーメニュー
+            $('.humburger, .sp_nav li').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.humburger').toggleClass('open');
+            });
+        });
+
+    </script>
     <script type="text/javascript">
         // Form Validator
         $(document).ready(function () {

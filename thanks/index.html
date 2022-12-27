@@ -20,9 +20,7 @@
 
 <body>
     <div class="thanks_message">
-        <div class="top_img">
-            <img src="images/thanks_top.png" alt="">
-        </div>
+
         <div class="thanks_text">
             <p class="text1">お問い合わせありがとうございます。</p>
             <p class="text2">送信が無事にできました。
@@ -30,13 +28,19 @@
                 <br>しばらくお待ちください。
             </p>
         </div>
+        <div class="top_img">
+            <picture>
+                <source media="(max-width:767px )" srcset="images/sp_thanks_img@2x.png" width:100%;>
+                <img src="images/thanks_top.png" alt="" width:100%;>
+            </picture>
+        </div>
         <div class="all_thanks">
             <img src="images/all_thanks@2x.png" alt="">
         </div>
     </div>
     <div class="top_link">
         <div class="kainagi_back">
-            <a href="../index.html"><img src="images/kainagi_back@2x.png" alt=""></a>
+            <a href="../index.html"><img src="images/kainagi_back@2x.png" alt="" width:100%;></a>
         </div>
         <div class="back_message">
             <p>TOPページに戻りたい...</p>
@@ -44,6 +48,9 @@
     </div>
     <footer>
         <div class="footer_wrap">
+            <div class="logo_footer">
+                <div><img src="images/logo_1@2x.png" alt="カメレオンのロゴ"></div>
+            </div>
             <nav class="pc_nav_footer">
                 <ul>
                     <li><a href="../about/index.html">私について</a></li>

@@ -929,6 +929,9 @@ footer {
     display: flex;
     justify-content: center;
 }
+.logo_footer {
+    display: none;
+}
 .pc_nav_footer ul {
     display: flex;
 }
