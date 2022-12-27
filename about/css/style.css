@@ -63,7 +63,8 @@ body {
 .sp_nav,
 .humburger,
 .humburger_bg,
-.humburger_menu {
+.humburger_menu,
+.sp_sns {
     display: none;
 }
 @media screen and (max-width: 1010px) {
@@ -171,6 +172,41 @@ body {
     }
     .icon_hb {
         padding-right: 25px;
+    }
+    .sp_heart1 {
+        display: block;
+        width: 17%;
+        position: absolute;
+        top: 5%;
+        left: 18%;
+    }
+    .sp_heart2 {
+        display: block;
+        width: 9%;
+        position: absolute;
+        top: 31%;
+        right: 21%;
+    }
+    .sp_heart3 {
+        display: block;
+        width: 14%;
+        position: absolute;
+        bottom: 26%;
+        left: 6%;
+    }
+    .hb_sui {
+        display: block;
+        width: 28%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+    .hb_kainagi {
+        display: block;
+        width: 29%;
+        position: absolute;
+        top: 29%;
+        right: 0;
     }
 }
 
@@ -670,25 +706,24 @@ footer {
     padding-bottom: 21px;
 }
 @media screen and (max-width: 767px) {
-    @media screen and (max-width: 767px) {
-        footer {
-            background-image: url(../images/sp_footer_bg@2x.png);
-            padding-top: 112px;
-            min-height: auto;
-        }
-        .logo_footer {
-            display: block;
-        }
-        .footer_wrap {
-            padding: 0 34% 0 3%;
-        }
-        .pc_nav_footer ul {
-            display: none;
-        }
-        .copyright p {
-            font-size: 7px;
-            padding-top: 0px;
-            padding-bottom: 6px;
-        }
+    footer {
+        background-image: url(../images/sp_footer_bg@2x.png);
+        padding-top: 112px;
+        min-height: auto;
+    }
+    .logo_footer {
+        display: block;
+        width: 102px;
+    }
+    .footer_wrap {
+        padding: 0 34% 0 3%;
+    }
+    .pc_nav_footer ul {
+        display: none;
+    }
+    .copyright p {
+        font-size: 7px;
+        padding-top: 0px;
+        padding-bottom: 6px;
     }
 }

@@ -13,8 +13,18 @@ body {
     padding: 14px 21% 0 13%;
     box-sizing: border-box;
 }
+@media screen and (max-width: 767px) {
+    .header_wrap {
+        padding: 0;
+    }
+}
 .logo {
     width: 135px;
+}
+@media screen and (max-width: 767px) {
+    .logo {
+        width: 102px;
+    }
 }
 .pc_nav ul {
     display: flex;

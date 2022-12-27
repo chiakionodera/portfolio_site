@@ -46,16 +46,33 @@
             </div>
             <nav class="sp_nav">
                 <ul>
-                    <li class="sp_nav_top"><a href="about/index.html">私ってこんな人です</a></li>
-                    <li><a href="#i_can">私にできること</a></li>
-                    <li><a href="work/index.html">私の作品</a></li>
-                    <li><a href="contact/index.html">お問い合わせ</a></li>
+                    <li class="sp_nav_top"><a href="../index.html">私ってこんな人です</a></li>
+                    <li><a href="../index.html#i_can">私にできること</a></li>
+                    <li><a href="../work/index.html">私の作品</a></li>
+                    <li><a href="../contact/index.html">お問い合わせ</a></li>
                 </ul>
                 <div class="sp_sns">
                     <div class="icon_hb"><a href=""><img src="images/hb_instagram.png" alt=""></a></div>
                     <div class="icon_hb"><a href=""><img src="images/hb_twitter.png" alt=""></a></div>
                     <div class="icon_hb"><a href=""><img src="images/hb_note.png" alt=""></a></div>
                     <div class="icon_hb"><a href=""><img src="images/hb_youtube.png" alt=""></a></div>
+                </div>
+                <div class="sp_img">
+                    <div class="sp_heart1">
+                        <img src="images/hb_heart1.png" alt="">
+                    </div>
+                    <div class="sp_heart2">
+                        <img src="images/hb_heart2.png" alt="">
+                    </div>
+                    <div class="sp_heart3">
+                        <img src="images/hb_heart3.png" alt="">
+                    </div>
+                    <div class="hb_sui">
+                        <img src="images/hb_sui@2x.png" alt="">
+                    </div>
+                    <div class="hb_kainagi">
+                        <img src="images/hb_kainagi@2x.png" alt="">
+                    </div>
                 </div>
             </nav>
         </div>
@@ -221,6 +238,15 @@
             <p>© 2022 Chiaki studio All rights reserved</p>
         </div>
     </footer>
+    <script>
+        $(function () {
+            //ハンバーガーメニュー
+            $('.humburger, .sp_nav li').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.humburger').toggleClass('open');
+            });
+        });
+    </script>
 </body>
 
 </html>
