@@ -170,10 +170,12 @@ body {
 }
 .kai_top {
     position: relative;
+    padding-bottom: 192px;
+    z-index: 1;
 }
 .kai_top:hover {
     opacity: 1;
-    transform: translateY(-192px);
+    transform: translateY(-196px);
     overflow: initial;
     transition: 1s;
 }
@@ -182,7 +184,6 @@ body {
     width: 328px;
     height: 62px;
     overflow: hidden;
-    position: relative;
     top: 192px;
     vertical-align: baseline;
     z-index: 1;
@@ -192,27 +193,26 @@ body {
 }
 .kai_alert {
     position: absolute;
-    top: -17%;
+    top: 45%;
     right: 74%;
-    z-index: 2;
-    opacity: 0;
-}
-.kai_alert:hover {
-    opacity: 1;
+    z-index: 1;
 }
 
 .kai_top p {
     transform: rotate(-30deg);
     position: absolute;
-    top: -19%;
+    top: 45%;
     right: 49%;
-    z-index: 2;
-    opacity: 0;
+    z-index: 1;
 }
 @media screen and (max-width: 767px) {
     .kai_top {
         position: static;
         transform: rotate(90deg);
+        padding-bottom: 0px;
+    }
+    .kai_top:hover {
+        display: none;
     }
     .kai_top_pic {
         width: 122px;
@@ -221,6 +221,10 @@ body {
         left: -10%;
         margin-top: 90px;
         z-index: -1;
+        overflow: initial;
+    }
+    .kai_top_pic:hover {
+        display: none;
     }
     .kai_alert {
         position: absolute;
@@ -239,10 +243,11 @@ body {
 }
 .sui_top {
     position: relative;
+    padding-bottom: 192px;
 }
 .sui_top:hover {
     opacity: 1;
-    transform: translateY(-192px);
+    transform: translateY(-196px);
     overflow: initial;
     transition: 1s;
 }
@@ -251,7 +256,6 @@ body {
     position: relative;
     height: 62px;
     overflow: hidden;
-    position: relative;
     top: 192px;
     vertical-align: baseline;
     z-index: 1;
@@ -261,20 +265,25 @@ body {
 }
 .sui_alert {
     position: absolute;
-    top: -24%;
+    top: 45%;
     right: 50%;
     z-index: 1;
 }
 .sui_top p {
     position: absolute;
-    top: -16%;
     right: 42%;
+    top: 55%;
     z-index: 1;
 }
+
 @media screen and (max-width: 767px) {
     .sui_top {
         position: static;
         transform: rotate(-90deg);
+        padding-bottom: 0px;
+    }
+    .sui_top:hover {
+        display: none;
     }
     .sui_top_pic {
         width: 125px;
@@ -282,6 +291,10 @@ body {
         top: 0;
         right: 9%;
         margin-top: 90px;
+        overflow: initial;
+    }
+    .sui_top_pic:hover {
+        display: none;
     }
     .sui_alert {
         position: absolute;
@@ -300,20 +313,37 @@ body {
 }
 .nagi_top {
     position: relative;
+    padding-bottom: 192px;
+    z-index: 1;
+}
+.nagi_top:hover {
+    opacity: 1;
+    transform: translateY(-196px);
+    overflow: initial;
+    transition: 1s;
 }
 .nagi_top_pic {
     width: 359px;
+    position: relative;
+    height: 62px;
+    overflow: hidden;
+    top: 192px;
+    vertical-align: baseline;
+    z-index: 1;
+}
+.nagi_top_pic:hover {
+    overflow: initial;
 }
 .nagi_alert {
     position: absolute;
-    top: -15%;
+    top: 45%;
     right: 8%;
     z-index: 1;
 }
 .nagi_top p {
     transform: rotate(-330deg);
     position: absolute;
-    top: -15%;
+    top: 45%;
     right: 13%;
     z-index: 1;
 }
@@ -321,6 +351,10 @@ body {
     .nagi_top {
         position: static;
         transform: rotate(90deg);
+        padding-bottom: 0px;
+    }
+    .nagi_top:hover {
+        display: none;
     }
     .nagi_top_pic {
         width: 144px;
@@ -328,6 +362,10 @@ body {
         top: 0;
         left: 41%;
         margin-top: 80px;
+        overflow: initial;
+    }
+    .nagi_top_pic:hover {
+        display: none;
     }
     .nagi_alert {
         position: absolute;
@@ -348,6 +386,11 @@ body {
     background-size: cover;
     z-index: 1;
     position: relative;
+}
+@media screen and (max-width: 767px) {
+    .top_back {
+        z-index: -1;
+    }
 }
 .heart1 {
     position: absolute;
@@ -372,6 +415,7 @@ body {
     animation: fuwafuwa 3s infinite ease-in-out 0.8s alternate;
     display: inline-block;
     transition: 1.5s ease-in-out;
+    z-index: 0;
 }
 .heart4 {
     position: absolute;
@@ -380,6 +424,7 @@ body {
     animation: fuwafuwa 3s infinite ease-in-out 0.8s alternate;
     display: inline-block;
     transition: 1.5s ease-in-out;
+    z-index: 0;
 }
 .heart5 {
     position: absolute;
@@ -446,6 +491,7 @@ body {
         position: absolute;
         bottom: -5%;
         right: 10%;
+        z-index: 2;
     }
 }
 #about {
@@ -462,6 +508,7 @@ body {
     opacity: 1;
     transform: translate(0, 0);
 }
+
 .about_contents {
     display: flex;
     justify-content: flex-end;
@@ -593,14 +640,6 @@ body {
     margin-top: -147px;
 }
 
-.eachtext_anime span {
-    opacity: 0;
-}
-.eachtext_anime,
-.appeartext span,
-.about_love {
-    animation: text_anime_on 1s ease-out forwards;
-}
 .about_love {
     font-family: "Zen Maru Gothic", sans-serif;
     font-weight: bold;

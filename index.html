@@ -176,25 +176,24 @@
             </picture>
         </div>
         <div class="about_contents">
-            <div class="fade-in about_walk">
+            <div class="about_walk">
                 <div class="nagi_walk"><img src="images/nagi_walk@2x-8.png" alt=""></div>
                 <div class="kai_walk"><img src="images/kai_walk@2x-8.png" alt=""></div>
             </div>
-            <div class="fade-in about_title">
+            <div class="about_title">
                 <h3 class="about_title1"><span class="title_red1">私</span>って</h3>
                 <h3 class="about_title2">どんな人<span class="question">？</span></h3>
-                <div class="fade-in about_alert1">
+                <div class="about_alert1">
                     <img src="images/sui_watch@2x-8.png" alt="">
                 </div>
-                <div class="fade-in about_alert2">
+                <div class="about_alert2">
                     <img src="images/greenheart1-8.png" alt="">
                 </div>
             </div>
         </div>
         <div class="about_box">
             <div class="about_text">
-                <p class="eachtext_anime about_message">私の作品から<span class="eachtext_anime about_love">アイ</span>が<br
-                        class="br-sp">どんどんつながっていきますように</p>
+                <p class="about_message">私の作品から<span class="about_love">アイ</span>が<br class="br-sp">どんどんつながっていきますように</p>
                 <p class="about_message2">そんな想いを抱きデザインの勉強を始めました。<br>何でも挑戦すること、人の役に立つことが<br> 大好きな三児の母です。</p>
             </div>
             <div class="about_link">
@@ -499,51 +498,61 @@
                 $('.sp_nav').fadeToggle();
                 $('.humburger').toggleClass('open');
             });
-            var fadeIn = $('.fade-in');
-            $(window).on('scroll', function () {
-                $(fadeIn).each(function () {
-                    var offset = $(this).offset().top;
-                    var scroll = $(window).scrollTop();
-                    var windowHeight = $(window).height();
-                    if (scroll > offset - windowHeight + 200) {
-                        $(this).addClass("scroll-in");
-                    }
-                });
-            });
-        });
-        function EachTextAnimeControl() {
-            $('.eachtext_anime,.about_love').each(function () {
-                var elemPos = $(this).offset().top - 50;
-                var scroll = $(window).scrollTop();
-                var windowHeight = $(window).height();
-                if (scroll >= elemPos - windowHeight) {
-                    $(this).addClass("appeartext");
-
-                } else {
-                    $(this).removeClass("appeartext");
-                }
-            });
-        }
-        $(window).scroll(function () {
-            EachTextAnimeControl(); var element = $(".eachtext_anime");
-            element.each(function () {
-                var text = $(this).text();
-                var textbox = "";
-                text.split('').forEach(function (t, i) {
-                    if (t !== " ") {
-                        if (i < 10) {
-                            textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
-                        } else {
-                            var n = i / 10;
-                            textbox += '<span style="animation-delay:' + n + 's;">' + t + '</span>';
-                        }
-
-                    } else {
-                        textbox += t;
-                    }
-                });
-                $(this).html(textbox);
-            });
+            /* var fadeIn = $('.fade-in');
+          $(window).on('scroll', function () {
+              $(fadeIn).each(function () {
+                  var offset = $(this).offset().top;
+                  var scroll = $(window).scrollTop();
+                  var windowHeight = $(window).height();
+                  if (scroll > offset - windowHeight + 200) {
+                      $(this).addClass("scroll-in");
+                  }
+              });
+          });
+      });
+      $(function () {
+          // ウィンドウサイズ768px以下の場合、クラスを削除
+          if (window.matchMedia('(max-width: 768px)').matches) {
+              $(function () {
+                  elm.classList.remove(".fade-in,.scroll-in");
+              });
+              //768px以上の場合なにもしない
+          } else {
+          };
+      });
+      function EachTextAnimeControl() {
+          $('.eachtext_anime,.about_love').each(function () {
+              var elemPos = $(this).offset().top - 50;
+              var scroll = $(window).scrollTop();
+              var windowHeight = $(window).height();
+              if (scroll >= elemPos - windowHeight) {
+                  $(this).addClass("appeartext");
+ 
+              } else {
+                  $(this).removeClass("appeartext");
+              }
+          });
+      }
+      $(window).scroll(function () {
+          EachTextAnimeControl(); var element = $(".eachtext_anime");
+          element.each(function () {
+              var text = $(this).text();
+              var textbox = "";
+              text.split('').forEach(function (t, i) {
+                  if (t !== " ") {
+                      if (i < 10) {
+                          textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
+                      } else {
+                          var n = i / 10;
+                          textbox += '<span style="animation-delay:' + n + 's;">' + t + '</span>';
+                      }
+ 
+                  } else {
+                      textbox += t;
+                  }
+              });
+              $(this).html(textbox);
+          });*/
         });
 
 
