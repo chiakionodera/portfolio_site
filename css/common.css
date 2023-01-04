@@ -1,0 +1,210 @@
+@charset "utf-8";
+html {
+    scroll-behavior: smooth;
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 14px 21% 0 13%;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+    .header_wrap {
+        padding: 0;
+    }
+}
+.logo {
+    width: 135px;
+}
+@media screen and (max-width: 767px) {
+    .logo {
+        width: 102px;
+    }
+}
+.pc_nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 73px;
+}
+.pc_nav {
+    text-align: center;
+    border-radius: 30px;
+    width: 500px;
+    height: 60px;
+    background-color: #ffffff;
+    font-family: ”tbudrgothic-std”, sans-serif;
+    display: inline-block;
+}
+.pc_nav ul li {
+    color: #550700;
+    font-size: 13px;
+    padding: 24px 0;
+    text-align: center;
+}
+
+.header_contact {
+    text-align: center;
+    display: inline-block;
+}
+.header_contact .letter {
+    margin: 19px 0;
+}
+.sp_nav,
+.humburger,
+.humburger_bg,
+.humburger_menu,
+.sp_sns {
+    display: none;
+}
+@media screen and (max-width: 1010px) {
+    .pc_nav,
+    .header_contact {
+        display: none;
+    }
+    .header_wrap {
+        padding: 0;
+    }
+    .sp_fixed {
+        position: relative;
+    }
+    .humburger_bg {
+        display: inline-block;
+        width: 91px;
+        height: 83px;
+        border-radius: 0 0 0 100%;
+        background: #ffffff;
+        margin-right: 0 auto;
+    }
+
+    .humburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        height: 18px;
+        cursor: pointer;
+        z-index: 3;
+    }
+    .humburger span {
+        display: block;
+        position: relative;
+        top: 10px;
+        width: 30px;
+        height: 4px;
+        border-radius: 2px;
+        background: #b20700;
+        transition: 0.3s;
+    }
+    .humburger span::before,
+    .humburger span::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        border-radius: 2px;
+        background: #b20700;
+        transition: 0.3s;
+    }
+    .humburger span::before {
+        bottom: 10px;
+    }
+    .humburger span::after {
+        top: 10px;
+    }
+    .humburger.open span {
+        background: transparent;
+    }
+    .humburger.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+        background: #c8a73d;
+    }
+
+    .humburger.open span::after {
+        top: 0;
+        transform: rotate(135deg);
+        background: #c8a73d;
+    }
+    .humburger_menu p {
+        font-size: 6px;
+        font-family: "Montserrat Alternates", sans-serif;
+        position: absolute;
+        top: 10px;
+    }
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgb(178, 7, 0, 0.8);
+        z-index: 2;
+    }
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .sp_nav_top {
+        padding-top: 56px;
+    }
+    .sp_nav ul li {
+        padding: 56px 0;
+        color: #ffffff;
+        font-size: 15px;
+        z-index: 1;
+    }
+    .sp_nav .sp_sns {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 25px;
+        right: 18%;
+        z-index: 2;
+    }
+    .icon_hb {
+        padding-right: 25px;
+    }
+    .sp_heart1 {
+        display: block;
+        width: 17%;
+        position: absolute;
+        top: 5%;
+        left: 18%;
+    }
+    .sp_heart2 {
+        display: block;
+        width: 9%;
+        position: absolute;
+        top: 31%;
+        right: 21%;
+    }
+    .sp_heart3 {
+        display: block;
+        width: 14%;
+        position: absolute;
+        bottom: 26%;
+        left: 6%;
+    }
+    .hb_sui {
+        display: block;
+        width: 28%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+    .hb_kainagi {
+        display: block;
+        width: 29%;
+        position: absolute;
+        top: 29%;
+        right: 0;
+    }
+}

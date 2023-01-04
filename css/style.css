@@ -29,7 +29,7 @@ body {
     align-items: center;
     top: 298px;
     left: 21px;
-    z-index: 1;
+    z-index: 3;
 }
 .sns_fixed p {
     color: #550700;
@@ -54,50 +54,8 @@ body {
         display: none;
     }
 }
-.header_wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 14px 21% 0 13%;
-    box-sizing: border-box;
-}
-@media screen and (max-width: 767px) {
-    .header_wrap {
-        padding: 0;
-    }
-}
 
-.logo {
-    width: 135px;
-}
-@media screen and (max-width: 767px) {
-    .logo {
-        width: 102px;
-    }
-}
-
-.pc_nav ul {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 73px;
-}
-.pc_nav {
-    text-align: center;
-    border-radius: 30px;
-    width: 500px;
-    height: 60px;
-    background-color: #ffffff;
-    font-family: ”tbudrgothic-std”, sans-serif;
-    display: inline-block;
-}
-.pc_nav ul li {
-    color: #550700;
-    font-size: 13px;
-    padding: 24px 0;
-    text-align: center;
-}
-.header_contact {
+.header_contact_top {
     width: 60px;
     height: 60px;
     background-color: #ffffff;
@@ -105,161 +63,14 @@ body {
     text-align: center;
     display: inline-block;
 }
-.header_contact .letter {
+.header_contact_top .letter {
     margin: 19px 0;
 }
-.sp_nav,
-.humburger,
-.humburger_bg,
-.humburger_menu {
-    display: none;
-}
-.sp_sns {
-    display: none;
-}
-@media screen and (max-width: 1010px) {
-    .pc_nav,
-    .header_contact {
+@media screen and (max-width: 767px) {
+    .header_contact_top {
         display: none;
     }
-    .humburger_bg {
-        display: inline-block;
-        width: 91px;
-        height: 83px;
-        border-radius: 0 0 0 100%;
-        background: #ffffff;
-        margin-right: 0 auto;
-    }
-
-    .humburger {
-        display: block;
-        position: absolute;
-        top: 20px;
-        right: 15px;
-        height: 18px;
-        cursor: pointer;
-        z-index: 3;
-    }
-    .humburger span {
-        display: block;
-        position: relative;
-        top: 10px;
-        width: 30px;
-        height: 4px;
-        border-radius: 2px;
-        background: #b20700;
-        transition: 0.3s;
-    }
-    .humburger span::before,
-    .humburger span::after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 30px;
-        height: 4px;
-        border-radius: 2px;
-        background: #b20700;
-        transition: 0.3s;
-    }
-    .humburger span::before {
-        bottom: 10px;
-    }
-    .humburger span::after {
-        top: 10px;
-    }
-    .humburger.open span {
-        background: transparent;
-    }
-    .humburger.open span::before {
-        bottom: 0;
-        transform: rotate(45deg);
-        background: #c8a73d;
-    }
-
-    .humburger.open span::after {
-        top: 0;
-        transform: rotate(135deg);
-        background: #c8a73d;
-    }
-    .humburger_menu p {
-        font-size: 6px;
-        font-family: "Montserrat Alternates", sans-serif;
-        position: absolute;
-        top: 10px;
-    }
-    .sp_nav {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgb(178, 7, 0, 0.8);
-        z-index: 2;
-    }
-    .sp_nav ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-    .sp_nav_top {
-        padding-top: 56px;
-    }
-    .sp_nav ul li {
-        padding: 10% 0;
-        color: #ffffff;
-        font-size: 18px;
-        z-index: 1;
-    }
-    .sp_nav .sp_sns {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        bottom: 25px;
-        right: 18%;
-        z-index: 2;
-    }
-    .icon_hb {
-        padding-right: 25px;
-    }
-    .sp_heart1 {
-        display: block;
-        width: 17%;
-        position: absolute;
-        top: 5%;
-        left: 18%;
-    }
-    .sp_heart2 {
-        display: block;
-        width: 9%;
-        position: absolute;
-        top: 31%;
-        right: 21%;
-    }
-    .sp_heart3 {
-        display: block;
-        width: 14%;
-        position: absolute;
-        bottom: 26%;
-        left: 6%;
-    }
-    .hb_sui {
-        display: block;
-        width: 28%;
-        position: absolute;
-        top: 50%;
-        left: 0;
-    }
-    .hb_kainagi {
-        display: block;
-        width: 29%;
-        position: absolute;
-        top: 29%;
-        right: 0;
-    }
 }
-
 .top_title {
     position: relative;
 }
@@ -273,8 +84,34 @@ body {
 .top_title_heart {
     position: absolute;
     right: 54%;
-    bottom: 47%;
+    bottom: 37%;
+    animation: cloud ease-out 2s infinite normal;
 }
+@keyframes cloud {
+    0% {
+        transform: translate(0%, 0%);
+        opacity: 0;
+    }
+    33% {
+        transform: translate(0%, -2px);
+        opacity: 0.25;
+    }
+    46% {
+        transform: translate(0%, -4px);
+        opacity: 0.5;
+    }
+
+    72% {
+        transform: translate(0%, -5px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0%, -10px);
+        opacity: 0;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .top_title {
         position: static;
@@ -334,21 +171,43 @@ body {
 .kai_top {
     position: relative;
 }
+.kai_top:hover {
+    opacity: 1;
+    transform: translateY(-192px);
+    overflow: initial;
+    transition: 1s;
+}
 .kai_top_pic {
+    position: relative;
     width: 328px;
+    height: 62px;
+    overflow: hidden;
+    position: relative;
+    top: 192px;
+    vertical-align: baseline;
+    z-index: 1;
+}
+.kai_top_pic:hover {
+    overflow: initial;
 }
 .kai_alert {
     position: absolute;
     top: -17%;
     right: 74%;
-    z-index: 1;
+    z-index: 2;
+    opacity: 0;
 }
+.kai_alert:hover {
+    opacity: 1;
+}
+
 .kai_top p {
     transform: rotate(-30deg);
     position: absolute;
     top: -19%;
     right: 49%;
-    z-index: 1;
+    z-index: 2;
+    opacity: 0;
 }
 @media screen and (max-width: 767px) {
     .kai_top {
@@ -361,6 +220,7 @@ body {
         top: 0;
         left: -10%;
         margin-top: 90px;
+        z-index: -1;
     }
     .kai_alert {
         position: absolute;
@@ -380,8 +240,24 @@ body {
 .sui_top {
     position: relative;
 }
+.sui_top:hover {
+    opacity: 1;
+    transform: translateY(-192px);
+    overflow: initial;
+    transition: 1s;
+}
 .sui_top_pic {
     width: 337px;
+    position: relative;
+    height: 62px;
+    overflow: hidden;
+    position: relative;
+    top: 192px;
+    vertical-align: baseline;
+    z-index: 1;
+}
+.sui_top_pic:hover {
+    overflow: initial;
 }
 .sui_alert {
     position: absolute;
@@ -470,37 +346,71 @@ body {
 }
 .top_back {
     background-size: cover;
+    z-index: 1;
+    position: relative;
 }
 .heart1 {
     position: absolute;
     top: 52px;
+    animation: fuwafuwa 3s infinite ease-in-out 0.8s alternate;
+    display: inline-block;
+    transition: 1.5s ease-in-out;
 }
+
 .heart2 {
     position: absolute;
     top: 60px;
     right: 0;
+    animation: fuwafuwa 3s infinite ease-in-out 0.8s alternate;
+    display: inline-block;
+    transition: 1.5s ease-in-out;
 }
 .heart3 {
     position: absolute;
     top: 273px;
     left: 179px;
+    animation: fuwafuwa 3s infinite ease-in-out 0.8s alternate;
+    display: inline-block;
+    transition: 1.5s ease-in-out;
 }
 .heart4 {
     position: absolute;
     top: 253px;
     right: 114px;
+    animation: fuwafuwa 3s infinite ease-in-out 0.8s alternate;
+    display: inline-block;
+    transition: 1.5s ease-in-out;
 }
 .heart5 {
     position: absolute;
     top: 548px;
     left: 51px;
     z-index: 1;
+    animation: fuwafuwa 3s infinite ease-in-out 0.8s alternate;
+    display: inline-block;
+    transition: 1.5s ease-in-out;
+    z-index: 2;
 }
 .heart6 {
     position: absolute;
     top: 534px;
     right: 13px;
     z-index: 1;
+    animation: fuwafuwa 3s infinite ease-in-out 0.8s alternate;
+    display: inline-block;
+    transition: 1.5s ease-in-out;
+    z-index: 2;
+}
+@keyframes fuwafuwa {
+    0% {
+        transform: translate(0, 0) rotate(-7deg);
+    }
+    50% {
+        transform: translate(0, -7px) rotate(0deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(7deg);
+    }
 }
 .sp_top_heart1,
 .sp_top_heart2,
@@ -540,6 +450,17 @@ body {
 }
 #about {
     background-color: #fbfbfb;
+    z-index: 1;
+    position: relative;
+}
+.fade-in {
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+}
+.scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 .about_contents {
     display: flex;
@@ -599,7 +520,8 @@ body {
 .about_alert2 {
     position: absolute;
     top: 73%;
-    right: -122%;
+    right: -140px;
+    width: 170px;
 }
 .about_alert1 {
     position: absolute;
@@ -607,6 +529,9 @@ body {
     right: -40%;
     width: 140px;
     z-index: 1;
+}
+.about_alert1:hover {
+    transform: translate(-10px, -10px) rotate(10deg);
 }
 @media screen and (max-width: 767px) {
     .about_alert2 {
@@ -619,6 +544,12 @@ body {
         width: 57px;
     }
 }
+@media screen and (max-width: 1439px) {
+    .about_alert2 {
+        width: 170px;
+        right: -140px;
+    }
+}
 
 .about_walk {
     padding-top: 71px;
@@ -627,11 +558,13 @@ body {
     width: 103px;
     display: inline-block;
     padding-right: 166px;
+    transform: translate(-100px, 0);
 }
 .about_walk .nagi_walk {
     width: 99px;
     display: inline-block;
     padding-right: 40px;
+    transform: translate(-100px, 0);
 }
 @media screen and (max-width: 767px) {
     .about_walk {
@@ -659,11 +592,28 @@ body {
     letter-spacing: 0.05em;
     margin-top: -147px;
 }
-.about_message span {
+
+.eachtext_anime span {
+    opacity: 0;
+}
+.eachtext_anime,
+.appeartext span,
+.about_love {
+    animation: text_anime_on 1s ease-out forwards;
+}
+.about_love {
     font-family: "Zen Maru Gothic", sans-serif;
     font-weight: bold;
     font-size: 22px;
     color: #b20700;
+}
+@keyframes text_anime_on {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .about_message2 {
     padding-top: 33px;
@@ -709,6 +659,29 @@ body {
     position: absolute;
     top: 30%;
     left: 39%;
+    animation: dokidoki 3s ease-in-out 0s infinite alternate;
+}
+@keyframes dokidoki {
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 @media screen and (max-width: 767px) {
     .about_link {
@@ -1336,6 +1309,7 @@ body {
     position: absolute;
     top: 15%;
     left: 37%;
+    animation: dokidoki 3s ease-in-out 0s infinite alternate;
 }
 @media screen and (max-width: 767px) {
     .sakuhinsyu_link {
@@ -1459,6 +1433,7 @@ body {
     position: absolute;
     top: 57%;
     right: 56%;
+    animation: dokidoki 3s ease-in-out 0s infinite alternate;
 }
 @media screen and (max-width: 767px) {
     .contact_link p {
@@ -1525,16 +1500,24 @@ footer {
     position: absolute;
     bottom: -60px;
     right: 150px;
+    cursor: pointer;
+}
+.sui_back:hover {
+    transition-delay: 0.2s;
+    -webkit-transform: translate3d(0, -40px, 0);
+    transform: translate3d(0, -40px, 0);
 }
 .sui_back_text {
     position: absolute;
-    bottom: 68px;
-    right: 35px;
+    top: 29%;
+    right: -99%;
 }
+
 .sui_back_text p {
     font-size: 12px;
     color: #ffffff;
 }
+
 @media screen and (max-width: 767px) {
     footer {
         background-image: url(../images/sp_footer_bg@2x.png);
