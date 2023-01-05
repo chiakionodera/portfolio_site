@@ -447,6 +447,7 @@ body {
     position: absolute;
     top: 26px;
     right: 48%;
+    animation: dokidoki 3s ease-in-out 0s infinite alternate;
 }
 @media screen and (max-width: 767px) {
     .contact_icon {
