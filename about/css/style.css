@@ -2,7 +2,6 @@
 
 body {
     min-width: 1280px;
-    overflow-x: hidden;
     background-color: #fff6e5;
 }
 @media screen and (max-width: 767px) {

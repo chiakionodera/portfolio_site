@@ -3,7 +3,6 @@
 body {
     min-width: 1280px;
     background-color: #fbfbfb;
-    overflow-x: hidden;
     background-color: #fbfbfb;
 }
 
@@ -232,10 +231,12 @@ body {
 }
 .tab-list {
     display: flex;
+    padding-left: 30px;
 }
 .tab-list_bottom {
     display: flex;
     position: relative;
+    padding-left: 30px;
 }
 .btn1 {
     font-size: 15px;
@@ -245,6 +246,21 @@ body {
 .btn2 {
     font-size: 11px;
     font-family: "Montserrat Alternates", sans-serif;
+}
+@media screen and (max-width: 767px) {
+    .btn1 {
+        font-size: 13px;
+        padding-bottom: 2px;
+    }
+    .btn2 {
+        font-size: 10px;
+    }
+    .tab-list {
+        padding-left: 10px;
+    }
+    .tab-list_bottom {
+        padding-left: 10px;
+    }
 }
 .kai_banner_alert {
     display: none;
@@ -258,7 +274,7 @@ body {
     align-items: center;
     position: absolute;
     top: 0px;
-    left: 16px;
+    left: 27px;
     transform: translateY(65px);
     overflow: initial;
     transition: 2s;
@@ -276,16 +292,14 @@ body {
 .nagi_web_alert {
     display: none;
     position: absolute;
-    top: 65px;
-    left: 30px;
 }
 .tab-list-item5:hover .nagi_web_alert {
     display: flex;
     text-align: start;
     align-items: center;
     position: absolute;
-    top: 0px;
-    left: 250px;
+    top: -1px;
+    left: 266px;
     transform: translateY(65px);
     overflow: initial;
     transition: 2s;
@@ -320,16 +334,66 @@ body {
     padding-bottom: 18px;
     padding-right: 10px;
 }
+.sp_alert_contents {
+    display: none;
+}
 @media screen and (max-width: 767px) {
-    .btn1 {
-        font-size: 13px;
-        padding-bottom: 2px;
+    .tab-list-item4:hover .kai_banner_alert,
+    .tab-list-item5:hover .nagi_web_alert,
+    .tab-list-item6:hover .sui_graphic_alert {
+        display: none;
     }
-    .btn2 {
-        font-size: 10px;
+    .sp_alert_contents {
+        display: block;
+        position: absolute;
+        bottom: 87px;
+        right: 66px;
+    }
+    .sp_alert_contents p {
+        text-align: center;
+        font-size: 11px;
+        line-height: 1.45;
+    }
+    .sp_alert1 {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+    }
+    .banner_alert_b {
+        transform: rotate(180deg);
+        position: absolute;
+        top: 51px;
+        left: 41px;
+    }
+    .graphic_alert_b {
+        transform: rotate(-62deg);
+        position: absolute;
+        top: 34px;
+        left: 113px;
+    }
+    .web_alert_b {
+        transform: rotate(-77deg);
+        position: absolute;
+        top: 49px;
+        right: 27px;
+    }
+    .sp_alert2 {
+        display: flex;
+        justify-content: center;
+    }
+    .kai_menu_img {
+        width: 62px;
+        transform: rotate(180deg);
+    }
+    .sui_menu_img {
+        width: 68px;
+    }
+    .nagi_menu_img {
+        width: 60px;
+        transform: rotate(180deg);
+        margin-left: -12px;
     }
 }
-
 .tab-list-item1 {
     width: 200px;
     text-align: center;
@@ -349,7 +413,7 @@ body {
     border: 1px solid #ebd180;
     background-color: #ebd180;
     border-top-right-radius: 12px;
-    margin-right: 74px;
+    margin-right: 36px;
     cursor: pointer;
 }
 .tab-list-item3 {
@@ -381,7 +445,7 @@ body {
     border: 1px solid #ebd180;
     background-color: #ebd180;
     border-bottom-right-radius: 12px;
-    margin-right: 74px;
+    margin-right: 36px;
     cursor: pointer;
 }
 .tab-list-item6 {
@@ -492,8 +556,8 @@ body {
     }
     .tab-bottom2,
     .tab-bottom4,
-    .tab-bottom6 {
-        margin-top: 103px;
+    .tab-bottom5 {
+        margin-top: 200px;
     }
 }
 .works_title_head {
@@ -598,9 +662,13 @@ body {
     padding-top: 4px;
     color: #fff;
 }
+
 @media screen and (max-width: 767px) {
     .lightbox_btn {
         display: none;
+    }
+    .lb-outerContainer {
+        width: 100% !important;
     }
 }
 .work_detail {
@@ -623,14 +691,16 @@ body {
     .fade-in_img {
         display: block;
         text-align: center;
-        margin: 0 auto;
+        margin: 20px auto;
         padding-right: 0px;
+        position: static;
+    }
+    .fade-in_img:nth-of-type(2) {
+        position: absolute;
+        top: 0;
     }
     .work_detail {
         min-height: 0px;
-    }
-    .sp {
-        padding-top: 318px;
     }
 }
 .work_heading1_r {
@@ -788,8 +858,8 @@ body {
 }
 .work_title_heart {
     position: absolute;
-    top: 6%;
-    left: 3%;
+    top: 17px;
+    left: 28px;
     z-index: -1;
 }
 .work_text2 {
@@ -826,6 +896,9 @@ body {
         line-height: 1.64;
     }
 }
+.sp_lightbox_btn {
+    display: none;
+}
 .detail_btn {
     display: flex;
     justify-content: center;
@@ -861,8 +934,29 @@ body {
     display: flex;
 }
 @media screen and (max-width: 767px) {
+    .detail_contents {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+    .sp_lightbox_btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 74px;
+        height: 74px;
+        border-radius: 50%;
+        background-color: #008473;
+    }
+    .sp_lightbox_btn p {
+        font-size: 9px;
+        padding-top: 3px;
+        color: #fff;
+    }
     .detail_btn {
-        margin: 34px auto 76px auto;
+        margin: 34px auto 34px auto;
     }
 }
 .contact_icon {

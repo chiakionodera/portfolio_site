@@ -4,7 +4,6 @@ body {
     font-family: "小杉丸", sans-serif;
     min-width: 1280px;
     background-color: #fbfbfb;
-    overflow-x: hidden;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -16,10 +15,12 @@ body {
 #header {
     background-color: #e2b725;
     position: relative;
+    overflow: hidden;
 }
 @media screen and (max-width: 767px) {
     #header {
         position: relative;
+        overflow: initial;
     }
 }
 .sns_fixed {
@@ -390,6 +391,7 @@ body {
 @media screen and (max-width: 767px) {
     .top_back {
         z-index: -1;
+        margin-top: -3px;
     }
 }
 .heart1 {
@@ -428,9 +430,8 @@ body {
 }
 .heart5 {
     position: absolute;
-    top: 548px;
+    top: -28px;
     left: 51px;
-    z-index: 1;
     animation: fuwafuwa 3s infinite ease-in-out 0.8s alternate;
     display: inline-block;
     transition: 1.5s ease-in-out;
@@ -438,9 +439,8 @@ body {
 }
 .heart6 {
     position: absolute;
-    top: 534px;
+    top: -34px;
     right: 13px;
-    z-index: 1;
     animation: fuwafuwa 3s infinite ease-in-out 0.8s alternate;
     display: inline-block;
     transition: 1.5s ease-in-out;
@@ -1318,9 +1318,9 @@ body {
     .works_desc {
         width: 165px;
         font-size: 12px;
-        line-height: 1.25;
+        line-height: 1.6;
         padding-top: 14px;
-        min-height: 123px;
+        min-height: 147px;
     }
     .works_title1_red,
     .works_title1_yellow,
@@ -1441,14 +1441,15 @@ body {
     display: inline-block;
     text-align: left;
     font-size: 14px;
-    line-height: 1.78;
     letter-spacing: 0.025em;
 }
 .contact_text1 {
     padding-bottom: 31px;
+    line-height: 1.78;
 }
 .contact_text2 {
     padding-bottom: 28px;
+    line-height: 1.78;
 }
 .sui_contact {
     width: 87px;

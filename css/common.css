@@ -82,7 +82,7 @@ html {
 .sp_sns {
     display: none;
 }
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 767px) {
     .pc_nav,
     .header_contact {
         display: none;
@@ -99,7 +99,7 @@ html {
         height: 83px;
         border-radius: 0 0 0 100%;
         background: #ffffff;
-        margin-right: 0 auto;
+        margin-right: auto;
     }
 
     .humburger {
