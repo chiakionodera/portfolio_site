@@ -507,16 +507,19 @@
                 $('.sp_nav').fadeToggle();
                 $('.humburger').toggleClass('open');
             });
-            /*var fadeIn = $('.fade-in');
-            $(window).on('scroll', function () {
-                $(fadeIn).each(function () {
-                    var offset = $(this).offset().top;
-                    var scroll = $(window).scrollTop();
-                    var windowHeight = $(window).height();
-                    if (scroll > offset - windowHeight + 200) {
-                        $(this).addClass("scroll-in");
-                    }
-                });
+        });
+
+
+        var
+            fadeIn = $('.fade-in');
+        $(window).on('scroll', function () {
+            $(fadeIn).each(function () {
+                var offset = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > offset - windowHeight + 200) {
+                    $(this).addClass("scroll-in");
+                }
             });
         });
         $(function () {
@@ -561,7 +564,7 @@
                     }
                 });
                 $(this).html(textbox);
-            });* /
+            });
         });
 
 
