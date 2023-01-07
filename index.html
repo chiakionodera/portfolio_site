@@ -507,61 +507,61 @@
                 $('.sp_nav').fadeToggle();
                 $('.humburger').toggleClass('open');
             });
-            /* var fadeIn = $('.fade-in');
-          $(window).on('scroll', function () {
-              $(fadeIn).each(function () {
-                  var offset = $(this).offset().top;
-                  var scroll = $(window).scrollTop();
-                  var windowHeight = $(window).height();
-                  if (scroll > offset - windowHeight + 200) {
-                      $(this).addClass("scroll-in");
-                  }
-              });
-          });
-      });
-      $(function () {
-          // ウィンドウサイズ768px以下の場合、クラスを削除
-          if (window.matchMedia('(max-width: 768px)').matches) {
-              $(function () {
-                  elm.classList.remove(".fade-in,.scroll-in");
-              });
-              //768px以上の場合なにもしない
-          } else {
-          };
-      });
-      function EachTextAnimeControl() {
-          $('.eachtext_anime,.about_love').each(function () {
-              var elemPos = $(this).offset().top - 50;
-              var scroll = $(window).scrollTop();
-              var windowHeight = $(window).height();
-              if (scroll >= elemPos - windowHeight) {
-                  $(this).addClass("appeartext");
- 
-              } else {
-                  $(this).removeClass("appeartext");
-              }
-          });
-      }
-      $(window).scroll(function () {
-          EachTextAnimeControl(); var element = $(".eachtext_anime");
-          element.each(function () {
-              var text = $(this).text();
-              var textbox = "";
-              text.split('').forEach(function (t, i) {
-                  if (t !== " ") {
-                      if (i < 10) {
-                          textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
-                      } else {
-                          var n = i / 10;
-                          textbox += '<span style="animation-delay:' + n + 's;">' + t + '</span>';
-                      }
- 
-                  } else {
-                      textbox += t;
-                  }
-              });
-              $(this).html(textbox);
-          });*/
+            var fadeIn = $('.fade-in');
+            $(window).on('scroll', function () {
+                $(fadeIn).each(function () {
+                    var offset = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > offset - windowHeight + 200) {
+                        $(this).addClass("scroll-in");
+                    }
+                });
+            });
+        });
+        $(function () {
+            // ウィンドウサイズ768px以下の場合、クラスを削除
+            if (window.matchMedia('(max-width: 768px)').matches) {
+                $(function () {
+                    elm.classList.remove(".fade-in,.scroll-in");
+                });
+                //768px以上の場合なにもしない
+            } else {
+            };
+        });
+        function EachTextAnimeControl() {
+            $('.eachtext_anime,.about_love').each(function () {
+                var elemPos = $(this).offset().top - 50;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll >= elemPos - windowHeight) {
+                    $(this).addClass("appeartext");
+
+                } else {
+                    $(this).removeClass("appeartext");
+                }
+            });
+        }
+        $(window).scroll(function () {
+            EachTextAnimeControl(); var element = $(".eachtext_anime");
+            element.each(function () {
+                var text = $(this).text();
+                var textbox = "";
+                text.split('').forEach(function (t, i) {
+                    if (t !== " ") {
+                        if (i < 10) {
+                            textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
+                        } else {
+                            var n = i / 10;
+                            textbox += '<span style="animation-delay:' + n + 's;">' + t + '</span>';
+                        }
+
+                    } else {
+                        textbox += t;
+                    }
+                });
+                $(this).html(textbox);
+            });* /
         });
 
 
